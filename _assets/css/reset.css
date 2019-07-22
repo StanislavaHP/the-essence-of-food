@@ -1,0 +1,24 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    border: none;
+
+    font-style: normal;
+    font-weight: normal;
+    
+    text-decoration: none;
+    text-emphasis: none;
+    text-align: left;
+}
+
+ol, ul {
+    list-style: none;
+}

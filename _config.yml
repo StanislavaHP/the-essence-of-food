@@ -1,0 +1,41 @@
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. 
+
+# If you change this file, please restart the server process.
+
+# accessed via {{ site.title }}, {{ site.email }}
+# custom variable - {{ site.myvariable }}
+
+title: The Essence of Food
+email: your-email@example.com
+description: A resource for delicious and healthy recipes, short and easy to digest nutritional articles.
+destination: docs
+baseurl: "/the-essence-of-food" # the subpath of your site, e.g. /blog
+#baseurl: ""
+url: "https://stanislavahp.github.io"
+twitter_username: ""
+github_username:  StanislavaHP
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. 
+# Create a custom list to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docs
+  - _assets
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+
+

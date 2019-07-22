@@ -1,0 +1,44 @@
+<header class="site-header">
+
+    <section class="site-logo">
+
+        <img src="{{ site.baseurl }}/imgs/logo.png" alt="logo">
+
+    </section>
+
+    <nav class="site-nav">
+
+        <p class="site-nav-menu">
+            <a href="#" class="button">MENU</a>
+        </p>
+
+        {% assign pages = site.pages | sort: "rank" %}
+        <ul>
+            {% for page in pages %}
+                {% if page.layout == "default" and page.title %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ page.url }}">
+                        {{page.title}}
+                    </a>
+                    {% if page.nested == 1 %}
+                    <ul>
+                        {% assign subpages = pages | sort: "title" %}
+                            {% for subpage in subpages %}
+                                {% if subpage.rank == page.rank and subpage.layout == "category-introduction" %}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ subpage.url }}">
+                                        {{subpage.title}}
+                                    </a>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+    </nav>
+
+</header>
