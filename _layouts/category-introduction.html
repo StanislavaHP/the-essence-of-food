@@ -15,18 +15,18 @@
 
         {% include header.html %}
 
-        <main class="site-main">
+        <main class="site-main site-main-{{page.layout}}">
 
-            <heading>
+            <heading class="head-picture">
                 <p>
                     <img src="{{page.img}}" alt="img-description">
                 </p>
-                <h2>
+                <h1>
                     {{page.title}}
-                </h2>
-                <h4>
+                </h1>
+                <h3>
                     {{page.introduction}}
-                </h4>
+                </h3>
             </heading>
 
             <section class="gallery">
@@ -34,7 +34,7 @@
                 {% assign category_children = category_pages | where:"layout",page.child-layout %}
                 {% for page in category_children %}
                     <p>
-                        <a href="{{page.url}}"><img src="{{page.img}}" alt="img-description"></a>
+                        <a href="{{ site.baseurl }}{{page.url}}"><img src="{{page.img}}" alt="img-description"></a>
                         <p>{{ page.title }}</p>
                     </p>
                 {% endfor %}

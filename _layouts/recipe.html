@@ -15,31 +15,55 @@
 
         {% include header.html %}
 
-        <main class="site-main">
+        <main class="site-main site-main-{{page.layout}}">
 
-            <section>
-                <heading>
-                    <h2>{{page.title}}</h2>
-                </heading>
-                
-                {{ content }}
+            <section class="head-picture">
 
-                <div class="best-in">
-                    <h4>
-                        Nutrition-Chart:
-                    </h4>
-                    <p>
-                        <img src="{{page.chart}}" alt="nutrition-chart">
-                    </p>
-                </div>
-            </section>
-
-            <section class="recipe-image">
                 <p>
                     <img src="{{page.img}}" alt="img-description">
                 </p>
+                <h1>{{page.title}}</h1>
+
             </section>
 
+            <section class="instructions">
+
+                {{ content }}
+
+            </section>
+
+            <section class="nutrition-info">
+                <h2>Richest in:</h2>
+                <p>Share of daily recommended intake(%) for a portion of {{page.nutrient-share-base}} (based on a
+                    recommended diet of 2000Kcal)</p>
+                <ul>
+                    <li>
+                        <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top1nutrient-img}}" alt="{{page.top1nutrient-name}}" class="vit-min-icon">
+                        <div class="name">{{page.top1nutrient-name}}</div>
+                        <div class="stat">{{page.top1nutrient-share}}</div>
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top2nutrient-img}}" alt="{{page.top2nutrient-name}}" class="vit-min-icon">
+                        <div class="name">{{page.top2nutrient-name}}</div>
+                        <div class="stat">{{page.top2nutrient-share}}</div>
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top3nutrient-img}}" alt="{{page.top3nutrient-name}}" class="vit-min-icon">
+                        <div class="name">{{page.top3nutrient-name}}</div>
+                        <div class="stat">{{page.top3nutrient-share}}</div>
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top4nutrient-img}}" alt="{{page.top4nutrient-name}}" class="vit-min-icon">
+                        <div class="name">{{page.top4nutrient-name}}</div>
+                        <div class="stat">{{page.top4nutrient-share}}</div>
+                    </li>
+                    <li>
+                        <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top5nutrient-img}}" alt="{{page.top5nutrient-name}}" class="vit-min-icon">
+                        <div class="name">{{page.top5nutrient-name}}</div>
+                        <div class="stat">{{page.top5nutrient-share}}</div>
+                    </li>
+                </ul>
+            </section>
         </main>
 
         {% include footer.html %}
