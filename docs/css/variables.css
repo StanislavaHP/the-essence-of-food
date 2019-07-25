@@ -1,5 +1,12 @@
 :root{
-    --font-size-body: 18px;
+    --font-size-max: 20px;
+    --font-size-min: 12px;
+
+    --viewport-min: 320px;
+    --viewport-max: 1600px;
+
+    --min-line-height: 1rem;
+    --max-line-height: 1.5rem;
 
     --theme-color-black: #363538;
     --theme-color-grey: #8D8C8A;

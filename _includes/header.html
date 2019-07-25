@@ -2,18 +2,17 @@
 
     <section class="site-logo">
 
-        <img src="{{ site.baseurl }}/imgs/logo.png" alt="logo">
+        <p><i class="fas fa-seedling"></i></p>
 
     </section>
 
     <nav class="site-nav">
 
-        <p class="site-nav-menu">
-            <a href="#" class="button">MENU</a>
-        </p>
-
+        <input type="checkbox" id="menu"/>
+        <label for="menu" class="site-nav-menu"><i class="fas fa-bars"></i></label>
+       
         {% assign pages = site.pages | sort: "rank" %}
-        <ul>
+        <ul class="site-nav-options">
             {% for page in pages %}
                 {% if page.layout == "default" and page.title %}
                 <li>

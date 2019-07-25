@@ -1,24 +1,27 @@
 *, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
   box-sizing: border-box;
+  color: var(--theme-color-black, #363538);
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-    border: none;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+}
 
-    font-style: normal;
-    font-weight: normal;
-    
-    text-decoration: none;
-    text-emphasis: none;
-    text-align: left;
+a:focus, a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
