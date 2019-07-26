@@ -5,12 +5,12 @@
     --viewport-min: 320px;
     --viewport-max: 1600px;
 
-    --min-line-height: 1rem;
-    --max-line-height: 1.5rem;
+    --min-line-height: 1;
+    --max-line-height: 1.5;
 
     --theme-color-black: #363538;
     --theme-color-grey: #8D8C8A;
     --theme-color-white: #F6F6F6;
     --theme-color-dark-blue: #408697;
-    --theme-color-light-blue: #52D6F4;
+    --theme-color-light-blue: rgb(66,171,197,0.8);
 }

@@ -1,8 +1,50 @@
-
 html{
     font-size: calc(var(--font-size-min,12px) + (20 - 12) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
     font-family: 'Spectral', serif;
     line-height: calc(1.5 + (1.5 - 1) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+}
+
+body{
+    background-image: url("/imgs/background.jpg");
+    background-repeat: repeat;
+}
+
+h1 {
+    font-size: 7vw; 
+    text-transform: uppercase;   
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 6vw; 
+    text-transform: uppercase;  
+    padding-bottom: 0.5rem;  
+}
+
+h3 {
+    font-size: 2rem;  
+    text-transform: uppercase;  
+    padding-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;  
+    text-transform: uppercase; 
+    padding-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 1.25rem; 
+    padding-bottom: 0.5rem;  
+}
+
+h6 {
+    font-size: 1rem;  
+    padding-bottom: 0.5rem;
+}
+
+p{
+    padding-bottom: 0.5rem;
 }
 
 img {
@@ -10,34 +52,6 @@ img {
     height: auto;
 }
 
-.vit-min-icon {
-    width: 100px;
-    height: auto;
-}
-
-.head-picture {
-    color:  rgb(246, 246, 246, 0.6);
-}
-
-.head-picture img {
-    position: sticky;
-    top: 0;
-    z-index: -1;
-}
-
-.head-picture .text {
-    background-color: rgb(54, 53, 56, 0.6);
-    position: absolute;
-    width: 100%;
-    top: 40%;
-    text-transform: uppercase;
-}
-
-.head-picture h1 {
-    font-size: 6vw;    
-}
-
-.head-picture h3 {
-    font-size: 2vw;  
-    width: 40%;
+a:hover{
+    color: var(--theme-color-dark-blue, #408697);
 }

@@ -1,4 +1,4 @@
-@media (max-width:768px) {
+@media (max-width:960px) {
 
     .site-header .site-nav-menu i {
         color: var(--theme-color-white, #F6F6F6);
@@ -34,7 +34,7 @@
     }
 
     /* make the menu icon invisible and really big so we can close the menu by clicking on any area outside the nav */
-    #menu:checked + .site-nav-menu i {
+    #menu:checked+.site-nav-menu i {
         opacity: 0;
 
         position: absolute;

@@ -13,7 +13,13 @@
     opacity: 0.8;
     border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
 
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
     padding: 0.2rem 2rem;
+
+    z-index: 5;
 }
 
 .site-header i{
@@ -33,18 +39,17 @@
 .site-nav .site-nav-options{
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
 }
 
 .site-nav .site-nav-options li a {
     display: block;
     position: relative;
+    
+    text-align: center;
 
     padding: 0.75rem 1.5rem;
-
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.1rem;
 }
 
 .site-nav .site-nav-options li ul{
@@ -53,10 +58,6 @@
     align-items: flex-start;
 
     background-color: var(--theme-color-black, #363538);
-}
-
-.site-nav .site-nav-options li:hover>a {
-    color: var(--theme-color-dark-blue, #408697);
 }
 
 /* hide the sub list options unless they are hovered over */

@@ -10,7 +10,11 @@
 
 @import url('site-footer.css');
 
+@import url('index.css');
+
 @import url('animations.css');
 
-@import url('responsive.css');
+@import url('site-header-responsive.css');
+
+@import url('head-picture.css');
 
