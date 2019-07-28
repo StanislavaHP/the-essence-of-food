@@ -10,7 +10,15 @@
 
 @import url('site-footer.css');
 
-@import url('index.css');
+@import url('site-footer-responsive.css');
+
+@import url('default.css');
+
+@import url('contact-us.css');
+
+@import url('about-us.css');
+
+@import url('default-responsive.css');
 
 @import url('animations.css');
 

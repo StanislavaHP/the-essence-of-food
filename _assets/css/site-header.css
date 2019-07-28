@@ -10,7 +10,7 @@
 
     background-color: var(--theme-color-black, #363538);
     color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.8;
+    opacity: 0.95;
     border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
 
     font-size: 1rem;

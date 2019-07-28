@@ -9,17 +9,24 @@ html {
   color: var(--theme-color-black, #363538);
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+::placeholder {
   border: none;
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
   text-align: left;
-}
-
-a:focus, a:hover, a:visited {
-  text-decoration: none;
   color: inherit;
+  font-family: inherit;
+  outline: none;
 }
 
 ol, ul {

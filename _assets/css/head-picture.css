@@ -1,35 +1,41 @@
 .head-picture {
-    color:  rgb(246, 246, 246, 0.6);
-    
-    display: block;
-    position: relative;
     top: 0;
     z-index: -1;
+    padding: 0;
 
+    display: block;
+    position: relative;
+    overflow: hidden;
+    
     width: 100%;
     height: 50vw;
+}
 
-    overflow: hidden;
+.head-picture img{
+    height: auto;
+    width: 100%;
 }
 
 .head-picture .text {
-    background-color: rgb(54, 53, 56, 0.6);
+    background-color: rgba(54, 53, 56, 0.6);
+    color:  rgba(246, 246, 246, 0.8);
 
     display: block;   
     width: 100%;
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
+    transform: translate(0, 0%);
 
     padding: 0 1rem;
 }
 
-.head-picture img{ 
-    min-width: 100%;
-    min-height: 100%;
+.head-picture h3{
+    color: inherit;
+    padding-top: 0;
 
-    position: absolute;  
-    top: 50%;
-    left: 50%;
+    font-size: calc(10px + (30 - 10) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+}
 
-    transform: translate(-50%, -50%);
+.head-picture h1{
+    font-size: calc(30px + (70 - 30) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
 }
