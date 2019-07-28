@@ -1,0 +1,46 @@
+@media (max-width:960px) {
+    .site-main-default .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: -webkit-max-content;
+        grid-template-rows: max-content;
+        grid-gap: 1rem;
+    }
+
+    .site-main-default .image img{
+        height: auto;
+        width: 100%;
+    }
+
+    .image {
+        width: auto;
+        height: 25vw;
+    }
+
+    .site-main-default .about-us-content main{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
+@media (max-width:768px) {
+    .image {
+        width: auto;
+        height: 35vw;
+    }
+}
+
+@media (max-width:640px) {
+    .image {
+        width: auto;
+        height: 45vw;
+    }
+}
+
+@media (max-width:480px) {
+    .image {
+        width: auto;
+        height: 50vw;
+    }
+}
+

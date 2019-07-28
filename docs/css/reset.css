@@ -1,0 +1,114 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--theme-color-black, #363538);
+}
+
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+::-webkit-input-placeholder {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+::-moz-placeholder {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+:-ms-input-placeholder {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+::-ms-input-placeholder {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, 
+ul, ol, li, 
+a, 
+a:focus, a:hover, a:visited, 
+fieldset, input, textarea, select, option,
+input:focus, textarea:focus, option:focus, select:focus, 
+select:hover, option:hover, 
+::placeholder {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
