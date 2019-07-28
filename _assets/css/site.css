@@ -14,11 +14,15 @@
 
 @import url('default.css');
 
+@import url('default-responsive.css');
+
 @import url('contact-us.css');
 
 @import url('about-us.css');
 
-@import url('default-responsive.css');
+@import url('category-introduction.css');
+
+@import url('category-introduction-responsive.css');
 
 @import url('animations.css');
 

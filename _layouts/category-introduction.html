@@ -35,10 +35,10 @@
                 {% assign category_pages = site.pages | where:"type",page.type %}
                 {% assign category_children = category_pages | where:"layout",page.child-layout %}
                 {% for page in category_children %}
-                    <p>
+                    <div class="image-article">
                         <a href="{{ site.baseurl }}{{page.url}}" class="image"><img src="{{page.img}}" alt="img-description"></a>
                         <p>{{ page.title }}</p>
-                    </p>
+                    </div>
                 {% endfor %}
             </section>
 

@@ -1,0 +1,11 @@
+@media (max-width:960px) {
+    .site-main-category-introduction .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:640px) {
+    .site-main-category-introduction .gallery {
+        grid-template-columns: 1fr;
+    }
+}
