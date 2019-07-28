@@ -24,6 +24,10 @@
 
 @import url('category-introduction-responsive.css');
 
+@import url('recipe.css');
+
+@import url('recipe-responsive.css');
+
 @import url('animations.css');
 
 @import url('site-header-responsive.css');

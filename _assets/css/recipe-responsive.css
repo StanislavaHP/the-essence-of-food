@@ -1,0 +1,30 @@
+@media (max-width:960px) {
+    .site-main-recipe .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .site-main-recipe .content .nutrition-info{
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media (max-width:768px) {
+    .site-main-recipe .content .nutrition-info ul{
+        grid-template-rows: repeat(5,1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .site-main-recipe .content .nutrition-info ul li:nth-of-type(5){
+        grid-row: 5;
+        grid-column: 1;
+    }
+}
+
+@media (max-width:640px) {
+}
+
+@media (max-width:480px) {
+}
+
