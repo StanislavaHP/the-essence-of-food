@@ -8,21 +8,19 @@
         grid-column: 1;
         grid-row: 2;
     }
+
+    .site-main-recipe>.content>.nutrition-info .element-info .image{
+        height: 15vw;
+    }
 }
 
 @media (max-width:768px) {
-    .site-main-recipe .content .nutrition-info ul{
-        grid-template-rows: repeat(5,1fr);
-        grid-template-columns: 1fr;
-    }
-
-    .site-main-recipe .content .nutrition-info ul li:nth-of-type(5){
-        grid-row: 5;
-        grid-column: 1;
-    }
 }
 
 @media (max-width:640px) {
+    .site-main-recipe .content .nutrition-info ul{
+        grid-row-gap: 3rem;
+    }
 }
 
 @media (max-width:480px) {

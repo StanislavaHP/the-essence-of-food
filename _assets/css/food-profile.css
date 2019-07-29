@@ -1,0 +1,100 @@
+.site-main-food-profile .fun-facts,
+.site-main-food-profile .key-sources{
+    margin: 2rem;
+    padding-bottom: 3rem;
+ }
+
+.site-main-food-profile i{
+    padding-right: 1rem;
+
+    font-size: 3rem;
+    color: var(--theme-color-dark-blue, #408697);
+ }
+
+ .site-main-food-profile label{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--theme-color-dark-blue, #408697);
+ }
+
+.site-main-food-profile .fun-facts .toggle-section-fun-facts,
+.site-main-food-profile .key-sources .toggle-section-key-sources{
+    display: none;
+ }
+
+ .site-main-food-profile input[type="checkbox"]
+{
+    display: none;
+}
+
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-fun-facts,
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources{
+    display: block;
+    z-index: -2;
+ }
+
+ /* nutrition - info */
+.site-main-food-profile .key-sources .image{
+    height: 12vw;
+    width: auto;
+    min-width: 0;
+
+    z-index: -1;
+}
+
+.site-main-food-profile .key-sources ul{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 1rem;
+}
+
+.site-main-food-profile .key-sources ul .stat{
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: var(--theme-color-dark-blue, #408697);
+}
+
+.site-main-food-profile .key-sources ul .source{
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    background-color: rgba(54, 53, 56, 0.4);
+    color:  rgba(246, 246, 246, 0.8);
+
+    margin-top: 4rem;
+}
+
+/* fun-facts */
+.site-main-food-profile .fun-facts .image {
+    width: auto;
+    height: 60vw;
+}
+
+.site-main-food-profile .content .food-fact{
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.site-main-food-profile .content .food-fact p{
+    position: sticky;
+
+    background-color: rgba(54, 53, 56, 0.8);
+    color:  rgba(246, 246, 246, 0.8);
+ 
+    width: 100%;
+    bottom: 0;
+
+    padding: 0 1rem;
+
+    font-size: 2rem;
+
+    z-index: 2;
+}
+
+.site-main-food-profile .content>p
+{
+    text-align: right;
+}

@@ -29,7 +29,7 @@
             </heading>
 
             <main class="content">
-                
+
                 <section class="instructions">
 
                     {{ content }}
@@ -41,50 +41,35 @@
                     <p>Share of daily recommended intake(%) for a portion of {{page.nutrient-share-base}} (based on a
                         recommended diet of 2000Kcal)</p>
                     <ul>
-                        <li>
-                            <input type="checkbox" id="element"/>
-                            <label for="element" class="element-question">?</label>
-                            <section class="element-info">
-                                <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top1nutrient-img}}" alt="{{page.top1nutrient-name}}" class="vit-min-icon image">
-                                <div class="name">{{page.top1nutrient-name}}</div>
-                                <div class="stat">{{page.top1nutrient-share}}</div>
-                            </section>
+                        <li class="element-info">
+                            <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top1nutrient-img}}"
+                                alt="{{page.top1nutrient-name}}" class="vit-min-icon image">
+                            <div class="name">{{page.top1nutrient-name}}</div>
+                            <div class="stat">{{page.top1nutrient-share}}</div>
                         </li>
-                        <li>
-                            <input type="checkbox" id="element-2"/>
-                            <label for="element-2" class="element-question">?</label>
-                            <section class="element-info">
-                                <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top2nutrient-img}}" alt="{{page.top2nutrient-name}}" class="vit-min-icon image">
-                                <div class="name">{{page.top2nutrient-name}}</div>
-                                <div class="stat">{{page.top2nutrient-share}}</div>
-                            </section>
+                        <li class="element-info">
+                            <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top2nutrient-img}}"
+                                alt="{{page.top2nutrient-name}}" class="vit-min-icon image">
+                            <div class="name">{{page.top2nutrient-name}}</div>
+                            <div class="stat">{{page.top2nutrient-share}}</div>
                         </li>
-                        <li>
-                            <input type="checkbox" id="element-3"/>
-                            <label for="element-3" class="element-question">?</label>
-                            <section class="element-info">
-                                <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top3nutrient-img}}" alt="{{page.top3nutrient-name}}" class="vit-min-icon image">
-                                <div class="name">{{page.top3nutrient-name}}</div>
-                                <div class="stat">{{page.top3nutrient-share}}</div>
-                            </section>
+                        <li class="element-info">
+                            <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top3nutrient-img}}"
+                                alt="{{page.top3nutrient-name}}" class="vit-min-icon image">
+                            <div class="name">{{page.top3nutrient-name}}</div>
+                            <div class="stat">{{page.top3nutrient-share}}</div>
                         </li>
-                        <li>
-                            <input type="checkbox" id="element-4"/>
-                            <label for="element-4" class="element-question">?</label>
-                            <section class="element-info">
-                                <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top4nutrient-img}}" alt="{{page.top4nutrient-name}}" class="vit-min-icon image">
-                                <div class="name">{{page.top4nutrient-name}}</div>
-                                <div class="stat">{{page.top4nutrient-share}}</div>
-                            </section>
+                        <li class="element-info">
+                            <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top4nutrient-img}}"
+                                alt="{{page.top4nutrient-name}}" class="vit-min-icon image">
+                            <div class="name">{{page.top4nutrient-name}}</div>
+                            <div class="stat">{{page.top4nutrient-share}}</div>
                         </li>
-                        <li>
-                            <input type="checkbox" id="element-5"/>
-                            <label for="element-5" class="element-question">?</label>
-                            <section class="element-info">
-                                <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top5nutrient-img}}" alt="{{page.top5nutrient-name}}" class="vit-min-icon image">
-                                <div class="name">{{page.top5nutrient-name}}</div>
-                                <div class="stat">{{page.top5nutrient-share}}</div>
-                            </section>
+                        <li class="element-info">
+                            <img src="{{ site.baseurl }}/imgs/vits-mins/{{page.top5nutrient-img}}"
+                                alt="{{page.top5nutrient-name}}" class="vit-min-icon image">
+                            <div class="name">{{page.top5nutrient-name}}</div>
+                            <div class="stat">{{page.top5nutrient-share}}</div>
                         </li>
                     </ul>
                 </section>
