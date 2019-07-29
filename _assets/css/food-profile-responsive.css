@@ -31,13 +31,19 @@
 }
 
 @media (max-width:768px) {
+    .site-main-food-profile h2{
+        font-size: 2rem;
+    }
 }
 
 @media (max-width:640px) {
-    .site-main-food-profile .key-sources .image{
-        height: 30vw;
+    .site-main-food-profile .content .food-fact p{
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width:480px) {
+    .site-main-food-profile .content .food-fact p{
+        font-size: 1rem;
+    }
 }
