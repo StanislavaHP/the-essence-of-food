@@ -2,8 +2,8 @@
     margin: 5rem 2rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto,1fr);
     grid-gap: 0.5rem;
 
     border: 0.8rem double rgba(246, 246, 246, 0);

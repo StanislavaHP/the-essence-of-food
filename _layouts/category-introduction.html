@@ -17,7 +17,7 @@
 
         <main class="site-main site-main-{{page.layout}}">
 
-            <heading class="head-picture">
+            <header class="head-picture">
                 <p>
                     <img src="{{page.img}}" alt="img-description">
                 </p>
@@ -29,7 +29,7 @@
                         {{page.introduction}}
                     </h3>
                 </div>
-            </heading>
+            </header>
 
             <section class="gallery">
                 {% assign category_pages = site.pages | where:"type",page.type %}

@@ -417,7 +417,7 @@
 
 </header>
 
-        <main class="site-main site-main-nutrient_profile">
+        <main class="site-main site-main-nutrient-profile">
 
             <section class="head-picture">
 
@@ -431,13 +431,18 @@
 
             <section class="benefits">
 
-                <h2>
-                    What is so special about me?
-                </h2>
-                <h4>
-                    The benefits of Vitamin C
-                </h4>
-                <div class="benefits-content">
+                <input type="checkbox" id="checkbox-benefits" />
+                <label for="checkbox-benefits">
+                    <i class="fas fa-sort-down"></i> Vitamin C benefits
+                </label>
+                <div class="toggle-benefits">
+                    <h2>
+                        What is so special about me?
+                    </h2>
+                    <h4>
+                        The benefits of Vitamin C
+                    </h4>
+                    <div class="benefits-content">
     <ul>
         <li>
             Boosts your immune system.
@@ -458,88 +463,135 @@
         </li>
     </ul>
 </div>
-
+                </div>
+                
             </section>
 
             <section class="key-sources">
 
-                <h2>How can you get me?</h2>
-                <h4>Top Sources:</h4>
-                <p>Share of daily recommended intake(%) (based on a
-                    recommended diet of 2000Kcal)</p>
-                <p>We only included plant based products in the list.</p>
-                <ul>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/parsley.png"
-                            alt="Parsley" class="food-icon image">
-                        <div class="name">Parsley</div>
-                        <div class="stat">35.9%</div>
-                        <div class="stat-base">based on 10g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/pepper.png"
-                            alt="Bell Peppers" class="food-icon image">
-                        <div class="name">Bell Peppers</div>
-                        <div class="stat">170.3%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/papaya.svg.png" alt="Papaya"
-                            class="food-icon image">
-                        <div class="name">Papaya</div>
-                        <div class="stat">81.2%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/orange.svg.png" alt="Orange"
-                            class="food-icon image">
-                        <div class="name">Orange</div>
-                        <div class="stat">71.5%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/kiwi.png" alt="Kiwi"
-                            class="food-icon image">
-                        <div class="name">Kiwi</div>
-                        <div class="stat">123.6%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/sprouts.svg.png" alt="Brussels Sprouts"
-                            class="food-icon image">
-                        <div class="name">Brussels Sprouts</div>
-                        <div class="stat">82.7%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/strawberries.png" alt="Strawberries"
-                            class="food-icon image">
-                        <div class="name">Strawberries</div>
-                        <div class="stat">80.6%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/pineapple.png" alt="Pineapple"
-                            class="food-icon image">
-                        <div class="name">Pineapple</div>
-                        <div class="stat">63.7%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/broccoli.png" alt="Broccoli"
-                            class="food-icon image">
-                        <div class="name">Broccoli</div>
-                        <div class="stat">86.5%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                    <li>
-                        <img src="/the-essence-of-food/imgs/food-icon/clementine.svg.png"
-                            alt="Clementine" class="food-icon image">
-                        <div class="name">Clementine</div>
-                        <div class="stat">65.0%</div>
-                        <div class="stat-base">based on 100g</div>
-                    </li>
-                </ul>
+                <input type="checkbox" id="checkbox-key-sources" />
+                <label for="checkbox-key-sources">
+                    <i class="fas fa-sort-down"></i>Top Vitamin C sources
+                </label>
+                <div class="toggle-key-sources">
+                    <h2>How can you get me?</h2>
+                    <h4>Top Sources:</h4>
+                    <p>Share of daily recommended intake(%) (based on a
+                        recommended diet of 2000Kcal)</p>
+                    <p>We only included plant based products in the list.</p>
+                    <ul>
+                        <li class="four-grid h-grid">
+                            <div class="image">
+                                    <img src="https://images.pexels.com/photos/1275204/pexels-photo-1275204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Parsley" class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Parsley</div>
+                                <div class="stat">22.5%</div>
+                                <div class="stat-base">based on 10g</div>
+                            </div>
+                        </li>
+                        <li class="two-grid v-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/1434254/pexels-photo-1434254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Bell Peppers" class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Bell Peppers</div>
+                                <div class="stat">212.8%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li class="two-grid h-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/286948/pexels-photo-286948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Papaya"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Papaya</div>
+                                <div class="stat">101.5%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li class="two-grid v-grid two-grid-h">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Orange"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Orange</div>
+                                <div class="stat">89.3%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>  
+                        </li>
+                        <li  class="two-grid v-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/53426/kiwifruit-fruit-kiwi-food-53426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Kiwi"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Kiwi</div>
+                                <div class="stat">154.5%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li  class="two-grid v-grid two-grid-h">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/41171/brussels-sprouts-sprouts-cabbage-grocery-41171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Brussels Sprouts"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Brussels Sprouts</div>
+                                <div class="stat">103.3%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li  class="two-grid v-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/55744/strawberries-sweet-red-delicious-55744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Strawberries"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Strawberries</div>
+                                <div class="stat">100.8%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li  class="two-grid v-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/915016/pexels-photo-915016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Pineapple"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Pineapple</div>
+                                <div class="stat">79.7%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li  class="two-grid h-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/399629/pexels-photo-399629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Broccoli"
+                                    class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Broccoli</div>
+                                <div class="stat">108.2%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>
+                        </li>
+                        <li class="four-grid h-grid">
+                            <div class="image">
+                                <img src="https://images.pexels.com/photos/39683/oranges-tangerines-clementines-citrus-fruit-39683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                    alt="Clementine" class="food-icon">
+                            </div>
+                            <div class="text">
+                                <div class="name">Clementine</div>
+                                <div class="stat">189.5%</div>
+                                <div class="stat-base">based on 100g</div>
+                            </div>  
+                        </li>
+                    </ul>
+                </div>
 
             </section>
         </main>

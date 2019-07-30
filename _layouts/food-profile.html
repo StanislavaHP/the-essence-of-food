@@ -17,7 +17,7 @@
 
         <main class="site-main site-main-{{page.layout}}">
 
-            <section class="head-picture">
+            <header class="head-picture">
 
                 <p>
                     <img src="{{page.img}}" alt="img-description">
@@ -27,13 +27,13 @@
                     <h3>{{page.introduction}}</h3>
                 </div>
 
-            </section>
+            </header>
 
             <section class="key-sources">
 
                 <input type="checkbox" id="food-key-sources" />
                 <label for="food-key-sources">
-                    <i class="fas fa-chevron-down"></i>Top {{page.title}} nutrients
+                    <i class="fas fa-sort-down"></i>Top {{page.title}} nutrients
                 </label>
                 <div class="toggle-section-key-sources">
                     <h2>What am I rich in?</h2>
@@ -43,31 +43,33 @@
                     <ul>
                         <li>
                             <img src="{{ site.baseurl }}/imgs/vits-mins/{{ page.nutrient1-img }}"
-                                alt="{{ page.nutrient1-name }}" class="image vit-min-icon">
+                                alt="{{ page.nutrient1-name }}" class="vit-min-icon">
+
                             <div class="source">{{page.nutrient1-name}}</div>
                             <div class="stat">{{page.nutrient1-share}}</div>
                         </li>
                         <li>
                             <img src="{{ site.baseurl }}/imgs/vits-mins/{{ page.nutrient2-img }}"
-                                alt="{{ page.nutrient2-name }}" class="image vit-min-icon">
+                                alt="{{ page.nutrient2-name }}" class="vit-min-icon">
+
                             <div class="source">{{page.nutrient2-name}}</div>
                             <div class="stat">{{page.nutrient2-share}}</div>
                         </li>
                         <li>
                             <img src="{{ site.baseurl }}/imgs/vits-mins/{{ page.nutrient3-img }}"
-                                alt="{{ page.nutrient3-name }}" class="image vit-min-icon">
+                                alt="{{ page.nutrient3-name }}" class="vit-min-icon">
                             <div class="source">{{page.nutrient3-name}}</div>
                             <div class="stat">{{page.nutrient3-share}}</div>
                         </li>
                         <li>
                             <img src="{{ site.baseurl }}/imgs/vits-mins/{{ page.nutrient4-img }}"
-                                alt="{{ page.nutrient4-name }}" class="image vit-min-icon">
+                                alt="{{ page.nutrient4-name }}" class="vit-min-icon">
                             <div class="source">{{page.nutrient4-name}}</div>
                             <div class="stat">{{page.nutrient4-share}}</div>
                         </li>
                         <li>
                             <img src="{{ site.baseurl }}/imgs/vits-mins/{{ page.nutrient5-img }}"
-                                alt="{{ page.nutrient5-name }}" class="image vit-min-icon">
+                                alt="{{ page.nutrient5-name }}" class="vit-min-icon">
                             <div class="source">{{page.nutrient5-name}}</div>
                             <div class="stat">{{page.nutrient5-share}}</div>
                         </li>
@@ -80,7 +82,7 @@
 
                 <input type="checkbox" id="food-fun-facts" />
                 <label for="food-fun-facts">
-                    <i class="fas fa-chevron-down"></i>Fun facts about the {{page.title}}
+                    <i class="fas fa-sort-down"></i>Fun facts about the {{page.title}}
                 </label>
                 <div class="toggle-section-fun-facts">
                     <h2>

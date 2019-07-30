@@ -1,0 +1,139 @@
+.site-main-nutrient-profile i{
+    padding: 1rem;
+    padding-top: 0;
+
+    font-size: 3rem;
+    color:rgba(246, 246, 246, 0.8);
+ }
+
+ .site-main-nutrient-profile label{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    background-color: rgba(54, 53, 56, 0.6);
+    color:  rgba(246, 246, 246, 0.8);
+    display: block;
+    width: 100%;
+
+    cursor: pointer;
+ }
+
+.site-main-nutrient-profile .benefits,
+.site-main-nutrient-profile .key-sources{
+    margin: 2rem;
+    padding-bottom: 3rem;
+ }
+
+.site-main-nutrient-profile .benefits .toggle-benefits,
+.site-main-nutrient-profile .key-sources .toggle-key-sources{
+    display: none;
+ }
+
+ .site-main-nutrient-profile input[type="checkbox"]
+{
+    display: none;
+}
+
+.site-main-nutrient-profile input[type="checkbox"]:checked~.toggle-benefits,
+.site-main-nutrient-profile input[type="checkbox"]:checked~.toggle-key-sources{
+    display: block;
+    z-index: -2;
+ }
+
+ .site-main-nutrient-profile h2{
+     color: var(--theme-color-dark-blue, #408697);
+ }
+
+ /* benefits */
+ .site-main-nutrient-profile .benefits ul li:before{
+    content: "\f56b";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 800;
+    font-size: 1.5rem;
+
+    color: var(--theme-color-dark-blue, #408697);
+}
+
+.site-main-nutrient-profile .benefits ul li{
+    padding: 0.5rem;
+}
+
+/* key sources */
+.site-main-nutrient-profile .key-sources ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 10vw);
+    grid-gap: 0.1rem;
+
+    width: 100%;
+
+    border: 0.8rem double rgba(246, 246, 246, 0);
+    box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
+
+    background-color: rgba(54, 53, 56, 0.9);
+}
+
+.site-main-nutrient-profile .key-sources ul li{
+    position: relative;
+}
+
+.site-main-nutrient-profile .key-sources ul li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: var(--theme-color-black, #363538);
+    border-left: 0.15rem solid var(--theme-color-white, #F6F6F6);
+    border-right: 0.15rem solid var(--theme-color-white, #F6F6F6);
+    border-top: 0.15rem solid var(--theme-color-white, #F6F6F6);
+    border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
+
+    opacity: 0.75;
+    z-index:1;
+}
+
+.site-main-nutrient-profile .key-sources ul li .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    
+    color: var(--theme-color-white, #F6F6F6);
+
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+.site-main-nutrient-profile .key-sources ul li .text .stat-base{
+    font-weight: 400;
+}
+
+.site-main-nutrient-profile .key-sources ul li .text .stat{
+    color: var(--theme-color-dark-blue, #408697);
+    font-size: 2rem;
+}
+
+.site-main-nutrient-profile .key-sources ul li .image{
+    height: 100%;
+    width: 100%;
+}
+
+.site-main-nutrient-profile .key-sources ul li.four-grid{
+    grid-column: span 4;
+}
+
+.site-main-nutrient-profile .key-sources ul li.two-grid.v-grid{
+    grid-row: span 2;
+}
+
+.site-main-nutrient-profile .key-sources ul li.two-grid.h-grid{
+    grid-column: span 2;
+}

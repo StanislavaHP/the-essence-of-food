@@ -2,6 +2,7 @@
     .site-main-food-profile .key-sources ul{
         grid-template-columns: repeat(6,1fr);
         grid-template-rows: repeat(2,1fr);
+        align-content: stretch;
     }
 
     .site-main-food-profile .key-sources ul li:nth-of-type(1){
@@ -24,10 +25,6 @@
         grid-row: 2;
         grid-column: 4/6;
     }
-
-    .site-main-food-profile .key-sources .image{
-        height: 20vw;
-    }
 }
 
 @media (max-width:768px) {
@@ -44,6 +41,6 @@
 
 @media (max-width:480px) {
     .site-main-food-profile .content .food-fact p{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 }
