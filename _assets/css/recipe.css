@@ -29,13 +29,17 @@
     font-weight: 800;
 }
 
+.site-main-recipe .content .instructions,
+.site-main-recipe .content .nutrition-info{
+    box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
+
+    padding: 2rem 3rem;
+    z-index: 2;
+}
+
 /*instructions*/
 .site-main-recipe .content .instructions{
     grid-column: 1;
-    box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
-
-    padding: 2rem;
-    z-index: 2;
 }
 
 .site-main-recipe .content .instructions label{
@@ -75,19 +79,13 @@ input[type="checkbox"]:checked~.recipe-instruction{
 /* nutrition-info */
 .site-main-recipe .content .nutrition-info{
     grid-column: 2;
-    box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
-
-    padding: 2rem;
-    z-index: 2;
 }
 
 .site-main-recipe .content .nutrition-info ul{
     display: grid;
     grid-template-rows: repeat(5, minmax(max-content, 18%));
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(7,1fr);
     justify-items: flex-start;
-
-    height: 100%;
 }
 
 .site-main-recipe .content .nutrition-info ul li:nth-of-type(1){
@@ -110,6 +108,11 @@ input[type="checkbox"]:checked~.recipe-instruction{
     display: grid;
     grid-template-rows: max-content max-content;
     grid-template-columns: 1fr 1fr;
+
+    color: var(--theme-color-dark-blue, #408697);
+
+    font-weight: 800;
+    padding: 1rem;
 }
 
 .site-main-recipe .content .nutrition-info ul .element-info .name{
@@ -118,9 +121,11 @@ input[type="checkbox"]:checked~.recipe-instruction{
     justify-self: center;
 
     font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--theme-color-dark-blue, #408697);
     text-transform: uppercase;
+
+    text-align: center;
+
+    padding-top: 0.5rem;
 }
 
 .site-main-recipe .content .nutrition-info ul .element-info .stat{
@@ -130,8 +135,6 @@ input[type="checkbox"]:checked~.recipe-instruction{
     align-self: center;
 
     font-size: 2rem;
-    color: var(--theme-color-dark-blue, #408697);
-    font-weight: 800;
 }
 
 .site-main-recipe>.content>.nutrition-info .element-info .image{

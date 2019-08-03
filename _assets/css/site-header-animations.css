@@ -1,0 +1,38 @@
+.site-header>.site-nav>.site-nav-options>li>a,
+.site-header .site-logo{
+    animation: slide-in-top 1s ease;
+}
+
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(1)>a {
+}
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(2)>a {
+    animation-delay: 0.05s;
+}
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(3)>a {
+    animation-delay: 0.1s;
+}
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(4)>a {
+    animation-delay: 0.15s;
+}
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(5)>a {
+    animation-delay: 0.20s;
+}
+.site-header>.site-nav>.site-nav-options>li:nth-of-type(6)>a {
+    animation-delay: 0.25s;
+}
+
+@keyframes slide-in-top{
+    from{
+        transform: translate3d(0,-100%,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to{
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+
+

@@ -27,18 +27,18 @@
                         </a>
                     {% endif %}
                     {% if page.nested == 1 %}
-                    <ul>
-                        {% assign subpages = pages | sort: "title" %}
-                            {% for subpage in subpages %}
-                                {% if subpage.rank == page.rank and subpage.layout == "category-introduction" %}
-                                <li>
-                                    <a href="{{ site.baseurl }}{{ subpage.url }}">
-                                        {{subpage.title}}
-                                    </a>
-                                </li>
-                                {% endif %}
-                            {% endfor %}
-                    </ul>
+                        <ul>
+                            {% assign subpages = pages | sort: "title" %}
+                                {% for subpage in subpages %}
+                                    {% if subpage.rank == page.rank and subpage.layout == "category-introduction" %}
+                                    <li>
+                                        <a href="{{ site.baseurl }}{{ subpage.url }}">
+                                            {{subpage.title}}
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
+                        </ul>
                     {% endif %}
                 </li>
                 {% endif %}

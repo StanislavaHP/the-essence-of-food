@@ -34,7 +34,7 @@
 {
     box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
 
-    padding: 2rem; 
+    padding: 2rem 4rem; 
     z-index: 2;
 }
 
@@ -46,7 +46,6 @@
 .site-main-how-to-article .content .the-basics ul li .steps {
     font-size: 1.5rem;
     font-weight: 800;
-    text-decoration: underline;
     text-transform: uppercase;
     color: var(--theme-color-dark-blue, #408697);
 
@@ -56,6 +55,7 @@
 .site-main-how-to-article .content .the-basics p{
     font-size: 1.5rem;
     font-weight: 800;
+    padding: 2rem 0;
 }
 
 /* tips-tricks */

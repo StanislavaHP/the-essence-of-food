@@ -26,14 +26,6 @@
     border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
     opacity: 0.75;
     z-index:1;
-
-    transition: top 1s linear, bottom 1s linear;
-}
-
-.site-main-category-introduction .gallery .image-article:hover:before{
-    top: 100%;
-    bottom: 100%;
-    transition: top 1s linear, bottom 1s linear;
 }
 
 .site-main-category-introduction .gallery .image-article p {
@@ -47,10 +39,5 @@
 
     font-size: 2rem;
     font-weight: 800;
-
-    transition: opacity 0.25s linear;
 }
 
-.site-main-category-introduction .gallery .image-article:hover p{
-    opacity: 0;
-}

@@ -1,0 +1,33 @@
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-fun-facts, 
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources, 
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources ul>li {
+    animation: slide-in-right 1.5s ease;
+}
+
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources ul>li:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources ul>li:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources ul>li:nth-of-type(4) {
+    animation-delay: 0.3s;
+}
+
+.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources ul>li:nth-of-type(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translate3d(100%, 0, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
