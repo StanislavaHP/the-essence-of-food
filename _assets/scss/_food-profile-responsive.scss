@@ -1,0 +1,43 @@
+.site-main-food-profile {
+  @include bp(tablet-large) {
+    .key-sources ul {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      align-content: stretch;
+
+       $i: 1;
+       @while $i <= 5 {
+         li:nth-of-type(#{$i}) {
+           @if $i % 2 == 0{
+             grid-row: 2;
+           }
+           @else {
+             grid-row: 1;
+           }
+           grid-column: #{$i} / #{($i + 2)};
+         }
+            $i: $i+1;
+      }
+    }
+  }
+
+  @include bp(tablet) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @include bp(phone-large) {
+    .food-fact p {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include bp(phone-medium) {
+    .food-fact p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+

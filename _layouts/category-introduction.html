@@ -19,27 +19,27 @@
         <main class="site-main site-main-{{page.layout}}">
 
             <header class="head-picture">
-                <p>
-                    <img src="{{page.img}}" alt="img-description">
-                </p>
-                <div class="text">
-                    <h1>
-                        {{page.title}}
-                    </h1>
-                    <h3>
-                        {{page.introduction}}
-                    </h3>
-                </div>
+
+                {% 
+                    include head-picture.html 
+                    img=page.img 
+                    img-description=page.img-description 
+                    h1 = page.title 
+                    introduction = page.introduction
+                    h3 = 1
+                %}
+
             </header>
 
             <section class="gallery">
                 {% assign category_pages = site.pages | where:"type",page.type %}
                 {% assign category_children = category_pages | where:"layout",page.child-layout %}
                 {% for page in category_children %}
-                    <div class="image-article">
-                        <a href="{{ site.baseurl }}{{page.url}}" class="image"><img src="{{page.img}}" alt="img-description"></a>
-                        <p>{{ page.title }}</p>
-                    </div>
+                <div class="image-article">
+                    <a href="{{ site.baseurl }}{{page.url}}" class="image"><img src="{{page.img}}"
+                            alt="img-description"></a>
+                    <p>{{ page.title }}</p>
+                </div>
                 {% endfor %}
             </section>
 
