@@ -18,17 +18,13 @@
 
         <main class="site-main site-main-{{page.layout}}">
 
-            <section class="head-picture">
-
-                {% 
-                    include head-picture.html 
-                    img=page.img 
-                    img-description=page.img-description 
-                    h1 = page.title 
-                %}
+            {% 
+                include head-picture.html 
+                img=page.img 
+                img-description=page.img-description 
+                subject = page.title 
+            %}
     
-            </section>
-
             <section class="benefits">
 
                 <input type="checkbox" id="checkbox-benefits" />

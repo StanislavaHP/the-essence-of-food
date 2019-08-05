@@ -20,12 +20,15 @@ input:focus, textarea:focus, option:focus, select:focus,
 select:hover, option:hover, 
 ::placeholder {
   border: none;
+  
   font-style: normal;
   font-weight: normal;
+  font-family: inherit;
+
   text-decoration: none;
   text-align: left;
+
   color: inherit;
-  font-family: inherit;
   outline: none;
 }
 

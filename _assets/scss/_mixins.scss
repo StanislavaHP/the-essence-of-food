@@ -6,7 +6,6 @@
         }
     }
 
-
     @else if $point == laptop-large {
         @media (max-width: 1600px) {
             @content;
@@ -19,7 +18,6 @@
         }
     }
 
-
     @else if $point == tablet-large {
         @media (max-width: 906px) {
             @content;
@@ -31,7 +29,6 @@
             @content;
         }
     }
-
 
     @else if $point == phone-large {
         @media (max-width: 640px) {
@@ -51,3 +48,43 @@
         }
     }
 }
+
+@mixin font($min-metric, $min, $max) {
+    font-size: calc(#{$min-metric} + (#{$max} - #{$min}) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+}
+
+@mixin slide-in($x, $y, $z, $name) {
+    @keyframes #{$name}{
+        from{
+            transform: translate3d(#{$x},#{$y},#{$z});
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        to{
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin fa-icon-list-addition($icons, $path: "") {
+    $i: 1;
+    @each $icon in $icons{
+        ul li:nth-of-type(#{$i})#{$path}:after{
+            content: $icon;
+            font-family: 'Font Awesome\ 5 Free', 'Font Awesome 5 Brands';
+            font-weight: 900;
+        }
+        $i: $i + 1;
+    }
+}
+
+@mixin dark-background {
+    background-color: var(--theme-color-black, #363538);
+    color: var(--theme-color-white, #F6F6F6);
+    opacity: 0.95;
+}
+
+
+

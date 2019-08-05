@@ -18,16 +18,12 @@
 
         <main class="site-main site-main-{{page.layout}}">
 
-            <header class="head-picture">
-
-                {% 
-                    include head-picture.html 
-                    img=page.img 
-                    img-description=page.img-description 
-                    h1 = page.title 
-                %}
-
-            </header>
+            {% 
+                include head-picture.html 
+                img=page.img 
+                img-description=page.img-description 
+                subject = page.title 
+            %}
 
             <main class="content">
 

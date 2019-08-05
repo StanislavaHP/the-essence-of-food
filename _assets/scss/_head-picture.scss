@@ -1,42 +1,38 @@
 .head-picture {
-    top: 0;
-    z-index: -1;
-    padding: 0;
+    z-index: -1; /*nav must be on top*/
 
-    display: block;
     position: relative;
     overflow: hidden;
     
     width: 100%;
     height: 50vw;
-}
 
-.head-picture img{
-    height: auto;
-    width: 100%;
-}
+    img{
+        height: auto;
+        width: 100%; 
+    }
 
-.head-picture .text {
-    background-color: rgba(54, 53, 56, 0.6);
-    color:  rgba(246, 246, 246, 0.8);
+    .text{
+        background-color: rgba(54, 53, 56, 0.6);
+        color:  rgba(246, 246, 246, 0.8);
+    
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+    }
 
-    display: block;   
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    margin: 2rem 0;
-    transform: translate(0, 0%);
+    h1{
+        @include font(24px, 24, 70);
+    }
 
-    padding: 0 1rem;
-}
+    h3{
+        color: inherit;
+        padding-top: 0;
 
-.head-picture h3{
-    color: inherit;
-    padding-top: 0;
+        @include font(10px, 10, 30);
+    }
 
-    font-size: calc(10px + (30 - 10) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
-}
-
-.head-picture h1{
-    font-size: calc(30px + (70 - 30) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+    @include bp(phone-large) {
+        height: 70vw;
+    }
 }

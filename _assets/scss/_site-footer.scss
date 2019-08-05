@@ -1,75 +1,77 @@
 
+$footer-contact-icons: ("\f2a0","\f0e0","\f5a0");
+$footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
+
 .site-footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
 
-    background-color: var(--theme-color-black, #363538);
-    color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.95;
-    border-top: 0.15rem solid var(--theme-color-dark-blue, #408697);
+    @include dark-background;
 
-    letter-spacing: 0.1rem;
+    border-top: var(--blue-border, 0.15rem solid var(--theme-color-dark-blue, #408697));
 
-    padding: 1rem 2rem 1rem 2rem;
-}
+    letter-spacing: var(--letter-spacing,0.1rem);
 
-.site-footer h4{
-    color: var(--theme-color-dark-blue, #408697);
-    font-weight: 600;
-}
+    padding: 1rem 2rem;
 
-.site-footer section{
-    grid-row: 1;
-}
-
-.site-footer i{
-    color: var(--theme-color-grey, #8D8C8A);
-    width: 2rem;
+    h4{
+        color: var(--theme-color-dark-blue, #408697);
+        font-weight: 600;
+    }
+    
+    :after{
+        color: var(--theme-color-grey, #8D8C8A);
+        width: 2rem;
+    }
 }
 
 /* follow-us*/
-.site-footer .follow-us{
+.site-footer .follow-us {    
     position: relative;
-}
 
-.site-footer .follow-us h4,
-.site-footer .follow-us h6{
-    text-align: right;
-}
+    /* add icons to ul li a:after */
+    @include fa-icon-list-addition($footer-follow-us-icons, " a");
 
-.site-footer .follow-us ul{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    h4,h6{
+        text-align: right;
+    }
     
-    position: absolute;
-    right: 0;
-}
-
-.site-footer .follow-us ul li i:hover{
-    color: var(--theme-color-dark-blue, #408697);
+    ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 2rem;
+        
+        position: absolute;
+        right: 0;
+    }
 }
 
 /* about */
 .site-footer .about p{
     font-size: 0.75rem;
-    padding-bottom: 0;
 }
 
 /* contacts */
-.site-footer .contacts h4,
-.site-footer .contacts h6{
-    text-align: left;
+.site-footer .contacts {
+    /* add icons to ul li:after */
+    @include fa-icon-list-addition($footer-contact-icons);
+
+    h4,h6{
+        text-align: left;
+    }
+
+    li{
+        position: relative;
+
+        padding-left: 2rem;
+
+        &:after{
+            position: absolute;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+        }
+    }
 }
 
-.site-footer .contacts li{
-    position: relative;
 
-    padding-left: 2rem;
-}
-
-.site-footer .contacts li i{
-	position: absolute;
-	top: 50%; left: 0;
-    transform: translateY(-50%);
-}

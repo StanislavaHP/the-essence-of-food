@@ -14,33 +14,10 @@
     animation-delay: 0.25s;
 }
 
-.head-picture h3{
+.head-picture .text h3{
     animation: slide-in-right 1s ease;
     animation-delay: 0.25s;
 }
 
-@keyframes slide-in-left{
-    from{
-        transform: translate3d(-100%,0,0);
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    to{
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-right{
-    from{
-        transform: translate3d(100%,0,0);
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    to{
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
+@include slide-in(-100%, 0, 0, 'slide-in-left');
+@include slide-in(100%, 0, 0, 'slide-in-right');

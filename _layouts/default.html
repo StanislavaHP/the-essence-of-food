@@ -19,18 +19,15 @@
         <main class="site-main site-main-{{page.layout}}">
 
             {% if page.header == 1%}
-                <header class="head-picture">
 
-                    {% 
-                        include head-picture.html 
-                        img=page.img 
-                        img-description=page.img-description 
-                        h1 = page.h1 
-                        introduction = page.introduction
-                        h3 = page.h3
-                    %}
+                {% 
+                    include head-picture.html 
+                    img=page.img 
+                    img-description=page.img-description 
+                    subject = page.subject 
+                    introduction = page.introduction
+                %}
 
-                </header>
             {% endif %}
             {{content}}
 
