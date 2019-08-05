@@ -8,7 +8,6 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
     justify-content: center;
 
     @include dark-background;
-
     border-top: var(--blue-border, 0.15rem solid var(--theme-color-dark-blue, #408697));
 
     letter-spacing: var(--letter-spacing,0.1rem);

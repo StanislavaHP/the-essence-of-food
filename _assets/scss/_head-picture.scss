@@ -7,10 +7,7 @@
     width: 100%;
     height: 50vw;
 
-    img{
-        height: auto;
-        width: 100%; 
-    }
+    @include img-in-wrap-positioning(100%,auto);
 
     .text{
         background-color: rgba(54, 53, 56, 0.6);
@@ -33,6 +30,10 @@
     }
 
     @include bp(phone-large) {
-        height: 70vw;
+        height: 65vw;
+    }
+
+    @include bp(phone-medium) {
+        height: 75vw;
     }
 }

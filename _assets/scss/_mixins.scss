@@ -19,7 +19,7 @@
     }
 
     @else if $point == tablet-large {
-        @media (max-width: 906px) {
+        @media (max-width: 960px) {
             @content;
         }
     }
@@ -43,7 +43,7 @@
     }
 
     @else if $point == phone-small {
-        @media (max-width: 230px) {
+        @media (max-width: 320px) {
             @content;
         }
     }
@@ -84,6 +84,23 @@
     background-color: var(--theme-color-black, #363538);
     color: var(--theme-color-white, #F6F6F6);
     opacity: 0.95;
+}
+
+@mixin img-in-wrap-positioning($height, $width){
+    img{
+        height: #{$height};
+        width: #{$width}; 
+
+        position: absolute;
+
+        min-height: 100%;
+        min-width: 100%;
+    
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
 }
 
 

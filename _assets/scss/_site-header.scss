@@ -5,35 +5,31 @@
     justify-content: space-between;
 
     position: fixed;
-    top:0;left:0;
+    top:0;
     width: 100%;
 
-    background-color: var(--theme-color-black, #363538);
-    color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.95;
-    border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
+    @include dark-background;
+    border-bottom: var(--blue-border, 0.15rem solid var(--theme-color-dark-blue, #408697));
 
-    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 
     padding: 0.2rem 2rem;
 
-    z-index: 5;
-}
+    z-index: 3;
 
-.site-header i{
-    font-size: 3rem;
-}
-
-.site-header .site-nav-menu i{
-    color: var(--theme-color-black, #363538);
-    position: absolute;
-    top: -100%;
-}
-
-.site-header #menu{
-    display: none;
+    i{
+        font-size: 3rem;
+    }
+    
+    .site-nav-menu i{
+        position: absolute;
+        top: -100%;
+    }
+    
+    #menu{
+        display: none;
+    }
 }
 
 .site-nav .site-nav-options{
@@ -41,58 +37,60 @@
     flex-flow: row nowrap;
     align-items: center;
     height: 100%;
-}
 
-.site-nav .site-nav-options li a {
-    display: block;
-    position: relative;
+    li a {
+        display: block;
+        position: relative;
+        
+        text-align: center;
     
-    text-align: center;
-
-    padding: 0.75rem 1.5rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    li ul{
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+    
+        background-color: var(--theme-color-black, #363538);
+    }
+    
+    /* hide the sub list options unless they are hovered over */
+    &>li>ul {
+        position: absolute;
+        border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
+        z-index: 1;
+        left: -100%;
+    }
+    
+    &>li:hover>ul {
+        min-width: 100%;
+        left: auto;
+    }
+    
+    /* set up an arrow */
+    li a:before { 
+        content:""; 
+        position: absolute; 
+        top: 45% ;
+        right:0.5rem;  
+    
+        height:0; 
+        width: 0; 
+        border: 0.4rem solid transparent; 
+      }
+    
+    /* we want the arrow to appear only if there are sublist options */
+    /* select a link only if it is both the first child and the second to last */
+    li a:first-child:nth-last-child(2):before {
+        border-top-color: var(--theme-color-white, #F6F6F6);
+    }
+    
+    li:hover a:first-child:nth-last-child(2):before {
+        border-top-color: transparent;
+        border-bottom-color: var(--theme-color-dark-blue, #408697);
+        top: 25%;
+    }   
 }
 
-.site-nav .site-nav-options li ul{
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-
-    background-color: var(--theme-color-black, #363538);
-}
-
-/* hide the sub list options unless they are hovered over */
-.site-nav .site-nav-options>li>ul {
-    position: absolute;
-    border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
-    z-index: 1;
-    left: -100%;
-}
-
-.site-nav .site-nav-options>li:hover>ul {
-    min-width: 100%;
-    left: auto;
-}
-
-/* set up an arrow */
-.site-nav .site-nav-options li a:before { 
-    content:""; 
-    position: absolute; 
-    top: 45% ;
-    right:0.5rem;  
-
-    height:0; 
-    width: 0; 
-    border: 0.4rem solid transparent; 
-  }
-
-/* we want the arrow to appear only if there are sublist options */
-.site-nav .site-nav-options li a:first-child:nth-last-child(2):before {
-    border-top-color: var(--theme-color-white, #F6F6F6);
-}
-
-.site-nav .site-nav-options li:hover a:first-child:nth-last-child(2):before {
-    border-top-color: transparent;
-    border-bottom-color: var(--theme-color-dark-blue, #408697);
-    top: 25%;
-}
 
