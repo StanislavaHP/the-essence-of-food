@@ -10,8 +10,8 @@ title: The Essence of Food
 email: your-email@example.com
 description: A resource for delicious and healthy recipes, short and easy to digest nutritional articles.
 destination: docs
-#baseurl: "/the-essence-of-food" # the subpath of your site, e.g. /blog
-baseurl: ""
+baseurl: "/the-essence-of-food" # the subpath of your site, e.g. /blog
+#baseurl: ""
 url: "https://stanislavahp.github.io"
 twitter_username: ""
 github_username:  StanislavaHP
