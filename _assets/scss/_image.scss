@@ -1,0 +1,42 @@
+.image {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: auto;
+    height: 20vw;
+}
+
+.image {
+    @include img-in-wrap-positioning(auto, 100%);
+}
+
+@include bp(tablet-large) {
+    .image {
+        width: auto;
+        height: 30vw;
+    }
+}
+
+@include bp(tablet) {
+    .image {
+        width: auto;
+        height: 40vw;
+    }
+}
+
+@include bp(phone-large) {
+    .image {
+        width: auto;
+        height: 45vw;
+    }
+}
+
+@include bp(phone-medium) {
+    .image {
+        width: auto;
+        height: 50;
+    }
+}

@@ -1,33 +1,33 @@
 .site-main-default{
-    .gallery .image {
+    .gallery article {
         transition: opacity 1s ease-in, border-color 1s ease-in;
 
-        &:hover{
+        &:hover .image{
             border-color: transparent;
         }
         
-        &:hover img,
-        &:hover ~ .text {
+        &:hover .image img,
+        &:hover .image ~ .text {
             opacity: 1;
         }
     }
 
-    .image:hover img {
+    .gallery article:hover .image img {
         animation: zoom-in 1.5s ease;
         animation-fill-mode: both;
     }
     
-    .image img {
+    .gallery article .image img {
         animation: zoom-out 0.5s ease;
         animation-fill-mode: both;
     }
     
-    .gallery .image:hover:before {
+    .gallery article:hover:before {
         animation: lens 1.5s ease;
         animation-fill-mode: both;
     }
     
-    .gallery .image:before {
+    .gallery article:before {
         animation: lens-out 0.5s ease;
         animation-fill-mode: both;
     }
@@ -37,5 +37,5 @@
 @include zoom-landscape(100%,125%,"zoom-in");
 @include zoom-landscape(125%,100%,"zoom-out");
 
-@include lens(0.000001rem, 0.000001rem, 100%, 100%, "lens-out");
-@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens");
+@include lens(0.000001rem, 0.000001rem, 75%, 100%, "lens-out");
+@include lens(75%, 100%, 0.000001rem, 0.000001rem, "lens");

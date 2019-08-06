@@ -13,31 +13,5 @@
             grid-template-rows: max-content;
             grid-gap: 1rem;
         }
-
-        .gallery .image {
-            width: auto;
-            height: 30vw;
-        }
-    }
-
-    @include bp(tablet) {
-        .gallery .image {
-            width: auto;
-            height: 40vw;
-        }
-    }
-
-    @include bp(phone-large) {
-        .gallery .image {
-            width: auto;
-            height: 45vw;
-        }
-    }
-
-    @include bp(phone-medium) {
-        .gallery .image {
-            width: auto;
-            height: 50;
-        }
     }
 }

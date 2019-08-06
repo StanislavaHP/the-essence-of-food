@@ -32,37 +32,11 @@ h6 { font-size: 1rem; }
     color: var(--theme-color-dark-blue, #408697);
 }
 
-.image {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-.image {
-    width: auto;
-    height: 20vw;
-}
-
-.image img{
-    height: auto;
-    width: 100%;
-
-    position: absolute;
-}
-
-.image img{ 
-    min-width: 100%;
-    min-height: 100%;
- 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-}
-
 a:hover{
     color: var(--theme-color-dark-blue, #408697);
 }
+
+
 
 
 
