@@ -1,7 +1,7 @@
 $opacity: 0.9;
 .site-main-default {
     .content{
-        padding: 0 2rem 4rem 2rem;
+        margin: 0 2rem 4rem 2rem;
     }
     
     h3 {
@@ -70,7 +70,7 @@ $opacity: 0.9;
     }
 
     /* disclaimer */
-    .disclaimer{
+    .disclaimer-content{
         padding: 15vw 2rem 7.5vw 2rem; 
         justify-content: center;
     }

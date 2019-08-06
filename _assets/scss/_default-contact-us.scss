@@ -1,14 +1,11 @@
 /* contact - us */
-.site-main-default .contact-us-form{
-    padding: 5rem 2rem 3rem 2rem;
-}
+.site-main-default .contact-us-content{
+    margin: 4rem 2rem;
 
-.site-main-default .contact-us-form h4,
-.site-main-default .button{
-    background-color: var(--theme-color-black, #363538);
-    color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.8;
-    border: 0.15rem solid var(--theme-color-dark-blue, #408697);
+    h4,
+    .button{
+    @include dark-background(0.8);
+    border: var(--blue-border,0.15rem solid var(--theme-color-dark-blue, #408697));
 
     font-size: 1.5rem;
 
@@ -19,50 +16,54 @@
     padding: 0.5rem 0;
 
     letter-spacing: 0.1rem;
-}
+    }
 
-.site-main-default .contact-us-form .row{
-    position: relative;
-}
-
-.site-main-default .contact-us-form i{
-    font-size: 1rem;
-    color: var(--theme-color-grey, #8D8C8A);
-    z-index: 1;
+    .row{
+        position: relative;
+    }
     
-    position: absolute;
-    left: 0.5rem;
-    top: 50%;
-    text-align: center;
+    i{
+        font-size: 1rem;
+        color: var(--theme-color-grey, #8D8C8A);
+        z-index: 1;
+        
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        text-align: center;
+        
+        transform: translateY(-50%);
+    }
     
-    transform: translateY(-50%);
-}
-
-.site-main-default .contact-us-form option,
-.site-main-default .contact-us-form select,
-.site-main-default .contact-us-form input,
-.site-main-default .contact-us-form textarea{
-    width: 100%;
-
-    color: var(--theme-color-grey, #8D8C8A);
-    font-size: 1rem;
+    option,
+    select,
+    input,
+    textarea{
+        width: 100%;
     
-    padding-left: 3rem;
-    margin: 1rem 0;
+        color: var(--theme-color-grey, #8D8C8A);
+        font-size: 1rem;
+        
+        padding-left: 3rem;
+        margin: 1rem 0;
+    }
+    
+    option,
+    select,
+    input{
+        height: 2rem;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus{
+        @include dark-background(0.8);
+        border: var(--blue-border,0.15rem solid var(--theme-color-dark-blue, #408697));
+    }
+    
 }
 
-.site-main-default .contact-us-form option,
-.site-main-default .contact-us-form select,
-.site-main-default .contact-us-form input{
-    height: 2rem;
-}
 
-.site-main-default .contact-us-form input:focus,
-.site-main-default .contact-us-form textarea:focus,
-.site-main-default .contact-us-form select:focus{
-    background-color: rgba(54,53,56,0.8);
-    color: var(--theme-color-white, #F6F6F6);
-    border: 0.15rem solid var(--theme-color-dark-blue, #408697);
-}
+
 
 

@@ -7,7 +7,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
 
-    @include dark-background;
+    @include dark-background(0.95);
     border-top: var(--blue-border, 0.15rem solid var(--theme-color-dark-blue, #408697));
 
     letter-spacing: var(--letter-spacing,0.1rem);
@@ -19,7 +19,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
         font-weight: 600;
     }
     
-    :after{
+    :before{
         color: var(--theme-color-grey, #8D8C8A);
         width: 2rem;
     }
@@ -29,7 +29,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 .site-footer .follow-us {    
     position: relative;
 
-    /* add icons to ul li a:after */
+    /* add icons to ul li a:before */
     @include fa-icon-list-addition($footer-follow-us-icons, " a");
 
     h4,h6{
@@ -45,7 +45,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
         right: 0;
     }
     
-    a:hover:after{
+    a:hover:before{
         color: var(--theme-color-dark-blue, #408697); 
     }
 }
@@ -57,8 +57,10 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 
 /* contacts */
 .site-footer .contacts {
-    /* add icons to ul li:after */
-    @include fa-icon-list-addition($footer-contact-icons);
+    /* add icons to ul li:before */
+    ul{
+        @include fa-icon-list-addition($footer-contact-icons);
+    }
 
     h4,h6{
         text-align: left;
@@ -69,7 +71,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 
         padding-left: 2rem;
 
-        &:after{
+        &:before{
             position: absolute;
             top: 50%; left: 0;
             transform: translateY(-50%);

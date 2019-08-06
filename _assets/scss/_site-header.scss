@@ -8,7 +8,7 @@
     top:0;
     width: 100%;
 
-    @include dark-background;
+    @include dark-background(0.95);
     border-bottom: var(--blue-border, 0.15rem solid var(--theme-color-dark-blue, #408697));
 
     text-transform: uppercase;

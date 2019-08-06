@@ -1,11 +1,5 @@
-@media (max-width:960px) {
-    .site-main-category-introduction .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width:640px) {
-    .site-main-category-introduction .gallery {
+.site-main-category-introduction .gallery {
+    @include bp(phone-large) {
         grid-template-columns: 1fr;
     }
 }

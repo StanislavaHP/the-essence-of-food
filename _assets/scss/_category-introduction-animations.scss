@@ -1,18 +1,21 @@
-.site-main-category-introduction .gallery .image-article p {
-    transition: opacity 0.25s linear;
-}
-.site-main-category-introduction .gallery .image-article:hover p{
-    opacity: 0;
-}
+.site-main-category-introduction .gallery .image-article{
+    p{
+        transition: opacity 0.25s linear;
+    }
 
-.site-main-category-introduction .gallery .image-article:before {
-    transition: top 1s linear, bottom 1s linear;
-}
-
-.site-main-category-introduction .gallery .image-article:hover:before{
-    top: 100%;
-    bottom: 100%;
-    transition: top 1s linear, bottom 1s linear;
+    &:hover p{
+        opacity: 0;
+    }
+    
+    &:before {
+        transition: top 1s linear, bottom 1s linear;
+    }
+    
+    &:hover:before{
+        top: 100%;
+        bottom: 100%;
+        transition: top 1s linear, bottom 1s linear;
+    }
 }
 
 

@@ -37,5 +37,5 @@
 @include zoom-landscape(100%,125%,"zoom-in");
 @include zoom-landscape(125%,100%,"zoom-out");
 
-@include lens(0.000001rem, 0.000001rem, 75%, 100%, "lens-out");
-@include lens(75%, 100%, 0.000001rem, 0.000001rem, "lens");
+@include lens(0.000001rem, 0.000001rem, 100%, 100%, "lens-out");
+@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens");

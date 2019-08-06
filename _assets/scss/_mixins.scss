@@ -53,10 +53,10 @@
     font-size: calc(#{$min-metric} + (#{$max} - #{$min}) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
 }
 
-@mixin dark-background {
+@mixin dark-background($opacity) {
     background-color: var(--theme-color-black, #363538);
     color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.95;
+    opacity: #{$opacity};
 }
 
 @mixin box-shadow{
@@ -110,12 +110,20 @@
 @mixin fa-icon-list-addition($icons, $path: "") {
     $i: 1;
     @each $icon in $icons{
-        ul li:nth-of-type(#{$i})#{$path}:after{
+        li:nth-of-type(#{$i})#{$path}:before{
             content: $icon;
             font-family: 'Font Awesome\ 5 Free', 'Font Awesome 5 Brands';
             font-weight: 900;
         }
         $i: $i + 1;
+    }
+}
+
+@mixin fa-single-icon-list-addition($icon, $path: "&") {
+    #{$path}:before{
+        content: $icon;
+        font-family: 'Font Awesome\ 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
     }
 }
 
