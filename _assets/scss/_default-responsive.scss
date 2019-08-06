@@ -2,7 +2,7 @@
 .site-main-default {
     @include bp(tablet-large) {
 
-        main{
+        .about-us-content main{
             display: flex;
             flex-flow: column nowrap;
         }
