@@ -21,21 +21,9 @@
     }
   }
 
-  @include bp(tablet) {
-    h2 {
-      font-size: 2rem;
-    }
-  }
-
   @include bp(phone-large) {
-    .food-fact p {
-      font-size: 1.5rem;
-    }
-  }
-
-  @include bp(phone-medium) {
-    .food-fact p {
-      font-size: 1.25rem;
+    .food-facts .food-fact p {
+      font-size: 1rem;
     }
   }
 }

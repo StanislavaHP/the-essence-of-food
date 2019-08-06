@@ -143,10 +143,10 @@ h1, h2, h3, h4 {
   text-transform: uppercase; }
 
 h1 {
-  font-size: 5vw; }
+  font-size: 4rem; }
 
 h2 {
-  font-size: 4vw; }
+  font-size: 3rem; }
 
 h3 {
   font-size: 2rem; }
@@ -806,17 +806,14 @@ a:hover {
   .site-main-recipe .content .nutrition-info .element-info .image {
     height: 30vw; } }
 
-.site-main-food-profile .fun-facts,
-.site-main-food-profile .key-sources {
-  margin: 2rem;
-  padding-bottom: 3rem; }
+.site-main-food-profile h2 {
+  color: var(--theme-color-dark-blue, #408697);
+  font-weight: 900; }
 
 .site-main-food-profile i {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  font-size: 3rem;
-  color: rgba(246, 246, 246, 0.8); }
+  padding: 1rem;
+  padding-top: 0;
+  font-size: 3rem; }
 
 .site-main-food-profile label {
   font-size: 2rem;
@@ -828,73 +825,77 @@ a:hover {
   width: 100%;
   cursor: pointer; }
 
+.site-main-food-profile .fun-facts,
+.site-main-food-profile .key-sources {
+  margin: 4rem 2rem; }
+
 .site-main-food-profile .fun-facts .toggle-section-fun-facts,
 .site-main-food-profile .key-sources .toggle-section-key-sources {
   display: none; }
 
 .site-main-food-profile input[type="checkbox"] {
   display: none; }
-
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-fun-facts,
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources {
-  display: block;
-  z-index: -2; }
-
-.site-main-food-profile h2 {
-  color: var(--theme-color-dark-blue, #408697); }
+  .site-main-food-profile input[type="checkbox"]:checked ~ label {
+    font-size: 0.001rem;
+    color: rgba(54, 53, 56, 0.6); }
+  .site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-fun-facts,
+  .site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources {
+    display: block; }
 
 /* nutrition - info */
 .site-main-food-profile .key-sources ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem; }
-
-.site-main-food-profile .key-sources ul li {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center; }
-
-.site-main-food-profile .key-sources ul .stat {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--theme-color-dark-blue, #408697); }
-
-.site-main-food-profile .key-sources ul .source {
-  font-size: 1.25rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(54, 53, 56, 0.4);
-  color: rgba(246, 246, 246, 0.8); }
+  .site-main-food-profile .key-sources ul li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+  .site-main-food-profile .key-sources ul .stat {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--theme-color-dark-blue, #408697); }
+  .site-main-food-profile .key-sources ul .source {
+    background-color: var(--theme-color-black, #363538);
+    color: var(--theme-color-white, #F6F6F6);
+    opacity: 0.5;
+    border: 0.25rem inset var(--theme-color-dark-blue, #408697);
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%; }
 
 .site-main-food-profile .key-sources .vit-min-icon {
   height: auto;
   width: 6rem; }
 
 /* fun-facts */
-.site-main-food-profile .fun-facts .image {
-  width: auto;
-  height: 60vw; }
+.site-main-food-profile .food-facts > p {
+  text-align: right;
+  font-style: italic;
+  background-color: var(--theme-color-black, #363538);
+  color: var(--theme-color-white, #F6F6F6);
+  opacity: 0.5;
+  padding: 0.5rem; }
 
 .site-main-food-profile .food-facts .food-fact {
   position: relative;
   padding: 0.5rem 0; }
-
-.site-main-food-profile .food-facts .food-fact p {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: rgba(54, 53, 56, 0.8);
-  color: rgba(246, 246, 246, 0.8);
-  width: 100%;
-  bottom: 0;
-  padding: 0 1rem;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  z-index: 2; }
-
-.site-main-food-profile .food-facts > p {
-  text-align: right; }
+  .site-main-food-profile .food-facts .food-fact .image {
+    width: auto;
+    height: 60vw;
+    border: 1rem groove rgba(246, 246, 246, 0.8); }
+  .site-main-food-profile .food-facts .food-fact p {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: rgba(54, 53, 56, 0.8);
+    color: rgba(246, 246, 246, 0.8);
+    width: 100%;
+    bottom: 0;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    z-index: 2; }
 
 @media (max-width: 960px) {
   .site-main-food-profile .key-sources ul {
@@ -917,39 +918,31 @@ a:hover {
       grid-row: 1;
       grid-column: 5 / 7; } }
 
-@media (max-width: 768px) {
-  .site-main-food-profile h2 {
-    font-size: 2rem; } }
-
 @media (max-width: 640px) {
-  .site-main-food-profile .food-fact p {
-    font-size: 1.5rem; } }
-
-@media (max-width: 480px) {
-  .site-main-food-profile .food-fact p {
-    font-size: 1.25rem; } }
+  .site-main-food-profile .food-facts .food-fact p {
+    font-size: 1rem; } }
 
 .site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-fun-facts,
 .site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources,
 .site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li {
-  -webkit-animation: slide-in-right 1.5s ease;
-          animation: slide-in-right 1.5s ease; }
+  -webkit-animation: slide-in-right 1s ease;
+          animation: slide-in-right 1s ease; }
 
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li:nth-of-type(2) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s; }
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul li:nth-of-type(2) {
+  -webkit-animation-delay: 0.1;
+          animation-delay: 0.1; }
 
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li:nth-of-type(3) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s; }
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul li:nth-of-type(3) {
+  -webkit-animation-delay: 0.2;
+          animation-delay: 0.2; }
 
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li:nth-of-type(4) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s; }
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul li:nth-of-type(4) {
+  -webkit-animation-delay: 0.3;
+          animation-delay: 0.3; }
 
-.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li:nth-of-type(5) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s; }
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul li:nth-of-type(5) {
+  -webkit-animation-delay: 0.4;
+          animation-delay: 0.4; }
 
 @-webkit-keyframes slide-in-right {
   from {
@@ -968,6 +961,29 @@ a:hover {
   to {
     transform: translate3d(0, 0, 0);
     opacity: 1; } }
+
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-fun-facts .food-facts,
+.site-main-food-profile input[type="checkbox"]:checked ~ .toggle-section-key-sources ul > li {
+  -webkit-animation: scale 1s linear;
+          animation: scale 1s linear;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+
+@-webkit-keyframes scale {
+  from {
+    width: 0;
+    height: 0; }
+  to {
+    width: 100%;
+    height: 100%; } }
+
+@keyframes scale {
+  from {
+    width: 0;
+    height: 0; }
+  to {
+    width: 100%;
+    height: 100%; } }
 
 .site-main-how-to-article .content {
   display: grid;
@@ -1002,25 +1018,28 @@ a:hover {
   .site-main-how-to-article .content h4 {
     height: 6rem; }
 
-/*the-basics*/
 .site-main-how-to-article .content .the-basics ul li .steps,
 .site-main-how-to-article .content .the-basics p {
-  font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase; }
 
-.site-main-how-to-article .content .the-basics ul li .steps {
+.site-main-how-to-article .content .the-basics p {
+  padding-top: 3rem; }
+
+.site-main-how-to-article .content .tips-tricks ul li:before {
+  content: "";
+  font-family: 'Font Awesome\ 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900; }
+
+.site-main-how-to-article .content .the-basics ul li .steps,
+.site-main-how-to-article .content .the-basics p,
+.site-main-how-to-article .content .tips-tricks ul li:before {
+  font-size: 1.5rem; }
+
+.site-main-how-to-article .content .the-basics ul li .steps,
+.site-main-how-to-article .content .tips-tricks ul li:before {
   color: var(--theme-color-dark-blue, #408697);
   padding-right: 1rem; }
-
-/* tips-tricks */
-.site-main-how-to-article .content .tips-tricks ul li:before {
-  content: "\f164";
-  font-family: 'Font Awesome\ 5 Free';
-  font-weight: 800;
-  font-size: 1.5rem;
-  padding-right: 1rem;
-  color: var(--theme-color-dark-blue, #408697); }
 
 @media (max-width: 1024px) {
   .site-main-how-to-article .content {
@@ -1208,14 +1227,6 @@ a:hover {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s; }
 
-@-webkit-keyframes scale {
-  from {
-    width: 0;
-    height: 0; }
-  to {
-    width: 100%;
-    height: 100%; } }
-
 @keyframes scale {
   from {
     width: 0;
@@ -1328,9 +1339,9 @@ a:hover {
   .head-picture h1 {
     font-size: calc(24px + (70 - 24) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
   .head-picture h3 {
+    font-size: calc(12px + (30 - 12) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
     color: inherit;
-    padding-top: 0;
-    font-size: calc(12px + (30 - 12) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
+    padding-top: 0; }
   @media (max-width: 640px) {
     .head-picture {
       height: 65vw; } }

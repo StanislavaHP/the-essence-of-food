@@ -9,32 +9,30 @@
     }
 }
 
-/*the-basics*/
-.site-main-how-to-article .content .the-basics{
-    ul li .steps,
-    p {
-        font-size: 1.5rem;
+.site-main-how-to-article .content{
+    .the-basics ul li .steps,
+    .the-basics p {
         font-weight: 800;
         text-transform: uppercase;
     }
 
-    ul li .steps{   
+    .the-basics p{
+        padding-top: 3rem;
+    }
+
+    .tips-tricks ul li{
+        @include fa-single-icon-list-addition("\f164");
+    }
+
+    .the-basics ul li .steps,
+    .the-basics p,
+    .tips-tricks ul li:before{
+        font-size: 1.5rem;
+    }
+
+    .the-basics ul li .steps,
+    .tips-tricks ul li:before{   
         color: var(--theme-color-dark-blue, #408697); 
         padding-right: 1rem;
     }
 }
-
-
-/* tips-tricks */
-.site-main-how-to-article .content .tips-tricks{
-    ul li:before{
-        content: "\f164";
-        font-family: 'Font Awesome\ 5 Free';
-        font-weight: 800;
-        font-size: 1.5rem;
-    
-        padding-right: 1rem;
-        color: var(--theme-color-dark-blue, #408697);
-    }
-}
-

@@ -23,10 +23,9 @@
     }
 
     h3{
+        @include font(12px, 12, 30);
         color: inherit;
         padding-top: 0;
-
-        @include font(12px, 12, 30);
     }
 
     @include bp(phone-large) {

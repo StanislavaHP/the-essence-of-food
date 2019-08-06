@@ -1,117 +1,132 @@
-.site-main-food-profile .fun-facts,
-.site-main-food-profile .key-sources{
-    margin: 2rem;
-    padding-bottom: 3rem;
- }
 
-.site-main-food-profile i{
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
 
-    font-size: 3rem;
-    color:rgba(246, 246, 246, 0.8);
- }
+.site-main-food-profile{
+    h2{
+        color: var(--theme-color-dark-blue, #408697);
+        font-weight: 900;
+    }
 
- .site-main-food-profile label{
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
+    i{
+        padding:1rem;
+        padding-top: 0;
+    
+        font-size: 3rem;
+     }
 
-    background-color: rgba(54, 53, 56, 0.6);
-    color:  rgba(246, 246, 246, 0.8);
-    display: block;
-    width: 100%;
+     
+    label{
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
 
-    cursor: pointer;
- }
+        background-color: rgba(54, 53, 56, 0.6);
+        color:  rgba(246, 246, 246, 0.8);
 
-.site-main-food-profile .fun-facts .toggle-section-fun-facts,
-.site-main-food-profile .key-sources .toggle-section-key-sources{
-    display: none;
- }
+        display: block;
+        width: 100%;
 
- .site-main-food-profile input[type="checkbox"]
-{
-    display: none;
-}
+        cursor: pointer;
+    }
 
-.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-fun-facts,
-.site-main-food-profile input[type="checkbox"]:checked~.toggle-section-key-sources{
-    display: block;
-    z-index: -2;
- }
+    .fun-facts,
+    .key-sources{
+        margin: 4rem 2rem;
+    }
 
- .site-main-food-profile h2{
-     color: var(--theme-color-dark-blue, #408697);
+    .fun-facts   .toggle-section-fun-facts,
+    .key-sources .toggle-section-key-sources{
+        display: none;
+    }
+
+    input[type="checkbox"]{
+        display: none;
+
+        &:checked~label{
+            font-size: 0.001rem;
+            color: rgba(54, 53, 56, 0.6);
+        }
+        &:checked~.toggle-section-fun-facts,
+        &:checked~.toggle-section-key-sources{
+        display: block;
+        }
+    }
  }
 
  /* nutrition - info */
- .site-main-food-profile .key-sources ul{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-gap: 1rem;
+ .site-main-food-profile .key-sources {
+    ul{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap: 1rem;
+
+        li{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        .stat{
+            font-size: 2rem;
+            font-weight: 800;
+
+            color: var(--theme-color-dark-blue, #408697);
+        }
+
+        .source{
+            @include dark-background(0.5);
+            border: 0.25rem inset var(--theme-color-dark-blue, #408697);
+            
+            padding: 0.5rem 0;
+
+            text-transform: uppercase;
+            text-align: center;
+
+            width: 100%;
+        }
+    }
+
+    .vit-min-icon{
+        height: auto;
+        width: 6rem;
+    }
 }
 
-.site-main-food-profile .key-sources ul li{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.site-main-food-profile .key-sources ul .stat{
-    font-size: 2rem;
-    font-weight: 800;
-
-    color: var(--theme-color-dark-blue, #408697);
-}
-
-.site-main-food-profile .key-sources ul .source{
-    font-size: 1.25rem;
-    font-weight: 800;
-    text-transform: uppercase;
-
-    width: 100%;
-    text-align: center;
-
-    background-color: rgba(54, 53, 56, 0.4);
-    color:  rgba(246, 246, 246, 0.8);
-}
-
-.site-main-food-profile .key-sources .vit-min-icon{
-    height: auto;
-    width: 6rem;
-}
 
 /* fun-facts */
-.site-main-food-profile .fun-facts .image {
-    width: auto;
-    height: 60vw;
-}
+.site-main-food-profile .food-facts{
+    &>p
+    {
+        text-align: right;
+        font-style: italic;
+        @include dark-background(0.5);
+        padding: 0.5rem;
+    }
 
-.site-main-food-profile .food-facts .food-fact{
-    position: relative;
-    padding: 0.5rem 0;
-}
+    .food-fact{
+        position: relative;
+        padding: 0.5rem 0;
 
-.site-main-food-profile .food-facts .food-fact p{
-    position: sticky;
+        .image {
+            width: auto;
+            height: 60vw;
+            border: 1rem groove rgba(246, 246, 246, 0.8);
+        }
 
-    background-color: rgba(54, 53, 56, 0.8);
-    color:  rgba(246, 246, 246, 0.8);
- 
-    width: 100%;
-    bottom: 0;
-
-    padding: 0 1rem;
-
-    font-size: 1.5rem;
-    text-transform: uppercase;
-
-    z-index: 2;
-}
-
-.site-main-food-profile .food-facts>p
-{
-    text-align: right;
+        p {
+        position: sticky;
+    
+        background-color: rgba(54, 53, 56, 0.8);
+        color:  rgba(246, 246, 246, 0.8);
+     
+        width: 100%;
+        bottom: 0;
+    
+        padding: 0 1rem;
+    
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    
+        z-index: 2;
+        }
+    }
 }
