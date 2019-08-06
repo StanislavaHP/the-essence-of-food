@@ -44,6 +44,10 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
         position: absolute;
         right: 0;
     }
+    
+    a:hover:after{
+        color: var(--theme-color-dark-blue, #408697); 
+    }
 }
 
 /* about */

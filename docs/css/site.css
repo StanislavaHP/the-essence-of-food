@@ -12,8 +12,10 @@
   --theme-color-white: #F6F6F6;
   --theme-color-dark-blue: #408697;
   --blue-border: 0.15rem solid var(--theme-color-dark-blue, #408697);
-  --letter-spacing: 0.1rem; }
+  --letter-spacing: 0.1rem;
+  --box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538); }
 
+/* animations */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -127,7 +129,7 @@ html {
   line-height: 1.5; }
 
 body {
-  background-image: url("/the-essence-of-food/imgs/background.jpeg");
+  background-image: url("/imgs/background.jpeg");
   background-repeat: repeat; }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -296,6 +298,8 @@ a:hover {
     grid-column-gap: 2rem;
     position: absolute;
     right: 0; }
+  .site-footer .follow-us a:hover:after {
+    color: var(--theme-color-dark-blue, #408697); }
 
 /* about */
 .site-footer .about p {
@@ -342,101 +346,88 @@ a:hover {
     .site-footer #flat {
       display: block; } }
 
-.site-main-default .content {
-  padding-bottom: 2rem; }
+.site-main-default {
+  /* image */
+  /* text */
+  /* disclaimer */ }
+  .site-main-default .content {
+    padding: 0 2rem 4rem 2rem; }
+  .site-main-default h3 {
+    color: var(--theme-color-dark-blue, #408697);
+    font-weight: 600;
+    padding-top: 5rem;
+    padding-bottom: 2rem; }
+  .site-main-default .recipes > p {
+    padding-bottom: 2rem; }
+  .site-main-default .gallery article {
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--theme-color-white, #F6F6F6);
+    border: 0.75rem double transparent;
+    box-shadow: var(--box-shadow, 0px 0px 30px 5px var(--theme-color-black, #363538)); }
+  .site-main-default .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: -webkit-max-content;
+    grid-template-rows: max-content; }
+  .site-main-default .gallery .image {
+    border: 0.5rem solid rgba(54, 53, 56, 0.9);
+    display: block;
+    position: relative; }
+    .site-main-default .gallery .image img {
+      opacity: 0.75; }
+    .site-main-default .gallery .image:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1; }
+  .site-main-default .gallery .text {
+    flex: 1 1 30%;
+    background-color: var(--theme-color-black, #363538);
+    opacity: 0.9;
+    border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between; }
+    .site-main-default .gallery .text h5 {
+      font-size: 2rem; }
+  .site-main-default .disclaimer {
+    padding: 15vw 2rem 7.5vw 2rem;
+    justify-content: center; }
 
-.site-main-default .content > * {
-  padding: 0 2rem; }
-
-.site-main-default h3 {
-  color: var(--theme-color-dark-blue, #408697);
-  font-weight: 600;
-  padding: 2rem 0; }
-
-.site-main-default > section {
-  margin-bottom: 2rem; }
-
-.site-main-default .recipes > p {
-  padding-bottom: 2rem; }
-
-.site-main-default .articles {
-  padding-bottom: 2rem; }
-
-.site-main-default .gallery article {
-  display: flex;
-  flex-flow: column nowrap;
-  color: rgba(246, 246, 246, 0.6);
-  border: 0.8rem double rgba(246, 246, 246, 0);
-  box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538); }
-
-/* image */
-.site-main-default .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: -webkit-max-content;
-  grid-template-rows: max-content; }
-
-.site-main-default .gallery .image {
-  border: 0.4rem solid rgba(54, 53, 56, 0.8); }
-
-.site-main-default .gallery .image img {
-  opacity: 0.75; }
-
-.site-main-default .gallery .image:hover img,
-.site-main-default .gallery .image:hover ~ .text {
-  opacity: 1; }
-
-.site-main-default .gallery .image:before {
-  content: "";
-  position: absolute; }
-
-.site-main-default .gallery .image:hover {
-  border-color: rgba(54, 53, 56, 0); }
-
-/* text */
-.site-main-default .gallery .text h5 {
-  font-size: 2rem; }
-
-.site-main-default .gallery .text {
-  color: var(--theme-color-white, #F6F6F6);
-  opacity: 0.8;
-  border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
-  background-color: var(--theme-color-black, #363538);
-  flex: 1 1 30%; }
-
-/* disclaimer */
-.site-main-default .disclaimer {
-  padding: 15vw 2rem 7.5vw 2rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center; }
-
-.site-main-default .gallery .image img,
-.site-main-default .gallery .image ~ .text,
 .site-main-default .gallery .image {
   transition: opacity 1s ease-in, border-color 1s ease-in; }
+  .site-main-default .gallery .image:hover {
+    border-color: transparent; }
+  .site-main-default .gallery .image:hover img,
+  .site-main-default .gallery .image:hover ~ .text {
+    opacity: 1; }
 
 .site-main-default .image:hover img {
-  -webkit-animation: zoom-in 1s ease;
-          animation: zoom-in 1s ease;
+  -webkit-animation: zoom-in 1.5s ease;
+          animation: zoom-in 1.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .site-main-default .image img {
-  -webkit-animation: zoom-out 1s ease;
-          animation: zoom-out 1s ease;
+  -webkit-animation: zoom-out 0.5s ease;
+          animation: zoom-out 0.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .site-main-default .gallery .image:hover:before {
-  -webkit-animation: lens 1s ease;
-          animation: lens 1s ease;
+  -webkit-animation: lens 1.5s ease;
+          animation: lens 1.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .site-main-default .gallery .image:before {
-  -webkit-animation: lens-out 1s ease;
-          animation: lens-out 1s ease;
+  -webkit-animation: lens-out 0.5s ease;
+          animation: lens-out 0.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
@@ -459,66 +450,58 @@ a:hover {
 @-webkit-keyframes zoom-out {
   from {
     height: auto;
-    width: 150%; }
+    width: 125%; }
   to {
     height: auto;
-    width: 125%; } }
+    width: 100%; } }
 
 @keyframes zoom-out {
   from {
     height: auto;
-    width: 150%; }
+    width: 125%; }
   to {
     height: auto;
-    width: 125%; } }
-
-@-webkit-keyframes lens {
-  from {
-    top: 0;
-    left: 0;
-    height: 0.000001rem;
-    width: 0.000001rem;
-    background-color: var(--theme-color-black, #363538); }
-  to {
-    height: 100%;
-    width: 100%;
-    background-color: var(--theme-color-black, #363538); } }
-
-@keyframes lens {
-  from {
-    top: 0;
-    left: 0;
-    height: 0.000001rem;
-    width: 0.000001rem;
-    background-color: var(--theme-color-black, #363538); }
-  to {
-    height: 100%;
-    width: 100%;
-    background-color: var(--theme-color-black, #363538); } }
+    width: 100%; } }
 
 @-webkit-keyframes lens-out {
   from {
+    height: 0rem;
+    width: 0rem; }
+  to {
     height: 100%;
     width: 100%;
-    background-color: var(--theme-color-black, #363538); }
-  to {
-    top: 0;
-    left: 0;
-    height: 0.000001rem;
-    width: 0.000001rem;
-    background-color: var(--theme-color-black, #363538); } }
+    background-color: var(--theme-color-black, #363538);
+    opacity: 0.2; } }
 
 @keyframes lens-out {
   from {
+    height: 0rem;
+    width: 0rem; }
+  to {
     height: 100%;
     width: 100%;
-    background-color: var(--theme-color-black, #363538); }
+    background-color: var(--theme-color-black, #363538);
+    opacity: 0.2; } }
+
+@-webkit-keyframes lens {
+  from {
+    height: 100%;
+    width: 100%; }
   to {
-    top: 0;
-    left: 0;
-    height: 0.000001rem;
-    width: 0.000001rem;
-    background-color: var(--theme-color-black, #363538); } }
+    height: 0rem;
+    width: 0rem;
+    background-color: var(--theme-color-black, #363538);
+    opacity: 0.2; } }
+
+@keyframes lens {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 0rem;
+    width: 0rem;
+    background-color: var(--theme-color-black, #363538);
+    opacity: 0.2; } }
 
 /* contact - us */
 .site-main-default .contact-us-form {
@@ -636,36 +619,33 @@ a:hover {
   font-weight: 800; }
 
 @media (max-width: 960px) {
+  .site-main-default main {
+    display: flex;
+    flex-flow: column nowrap; }
   .site-main-default .gallery {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: -webkit-max-content;
     grid-template-rows: max-content;
     grid-gap: 1rem; }
-  .site-main-default .image img {
-    height: auto;
-    width: 100%; }
-  .image {
+  .site-main-default .gallery .image {
     width: auto;
-    height: 25vw; }
-  .site-main-default .about-us-content main {
-    display: flex;
-    flex-flow: column nowrap; } }
+    height: 30vw; } }
 
 @media (max-width: 768px) {
-  .image {
+  .site-main-default .gallery .image {
     width: auto;
-    height: 35vw; } }
+    height: 40vw; } }
 
 @media (max-width: 640px) {
-  .image {
+  .site-main-default .gallery .image {
     width: auto;
     height: 45vw; } }
 
 @media (max-width: 480px) {
-  .image {
+  .site-main-default .gallery .image {
     width: auto;
-    height: 50vw; } }
+    height: 50; } }
 
 .site-main-category-introduction .gallery {
   margin: 5rem 2rem;
@@ -1403,7 +1383,7 @@ input[type="checkbox"]:checked ~ .recipe-instruction {
   .head-picture h3 {
     color: inherit;
     padding-top: 0;
-    font-size: calc(10px + (30 - 10) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
+    font-size: calc(12px + (30 - 12) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
   @media (max-width: 640px) {
     .head-picture {
       height: 65vw; } }

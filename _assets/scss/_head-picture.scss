@@ -26,7 +26,7 @@
         color: inherit;
         padding-top: 0;
 
-        @include font(10px, 10, 30);
+        @include font(12px, 12, 30);
     }
 
     @include bp(phone-large) {

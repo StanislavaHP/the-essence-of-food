@@ -1,77 +1,41 @@
-.site-main-default .gallery .image img, 
-.site-main-default .gallery .image~.text, 
-.site-main-default .gallery .image {
-    transition: opacity 1s ease-in, border-color 1s ease-in;
-}
+.site-main-default{
+    .gallery .image {
+        transition: opacity 1s ease-in, border-color 1s ease-in;
 
-.site-main-default .image:hover img {
-    animation: zoom-in 1s ease;
-    animation-fill-mode: both;
-}
-
-.site-main-default .image img {
-    animation: zoom-out 1s ease;
-    animation-fill-mode: both;
-}
-
-.site-main-default .gallery .image:hover:before {
-    animation: lens 1s ease;
-    animation-fill-mode: both;
-}
-
-.site-main-default .gallery .image:before {
-    animation: lens-out 1s ease;
-    animation-fill-mode: both;
-}
-
-@keyframes zoom-in {
-    from {
-        height: auto;
-        width: 100%;
+        &:hover{
+            border-color: transparent;
+        }
+        
+        &:hover img,
+        &:hover ~ .text {
+            opacity: 1;
+        }
     }
-    to {
-        height: auto;
-        width: 125%;
+
+    .image:hover img {
+        animation: zoom-in 1.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .image img {
+        animation: zoom-out 0.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .gallery .image:hover:before {
+        animation: lens 1.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .gallery .image:before {
+        animation: lens-out 0.5s ease;
+        animation-fill-mode: both;
     }
 }
 
-@keyframes zoom-out {
-    from {
-        height: auto;
-        width: 150%;
-    }
-    to {
-        height: auto;
-        width: 125%;
-    }
-}
 
-@keyframes lens {
-    from {
-        top: 0;
-        left: 0;
-        height: 0.000001rem;
-        width: 0.000001rem;
-        background-color: var(--theme-color-black, #363538);
-    }
-    to {
-        height: 100%;
-        width: 100%;
-        background-color: var(--theme-color-black, #363538);
-    }
-}
+@include zoom-landscape(100%,125%,"zoom-in");
+@include zoom-landscape(125%,100%,"zoom-out");
 
-@keyframes lens-out {
-    from {
-        height: 100%;
-        width: 100%;
-        background-color: var(--theme-color-black, #363538);
-    }
-    to {
-        top: 0;
-        left: 0;
-        height: 0.000001rem;
-        width: 0.000001rem;
-        background-color: var(--theme-color-black, #363538);
-    }
-}
+@include lens(0.000001rem, 0.000001rem, 100%, 100%, "lens-out");
+@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens");

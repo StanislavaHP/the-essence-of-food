@@ -53,6 +53,17 @@
     font-size: calc(#{$min-metric} + (#{$max} - #{$min}) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
 }
 
+@mixin dark-background {
+    background-color: var(--theme-color-black, #363538);
+    color: var(--theme-color-white, #F6F6F6);
+    opacity: 0.95;
+}
+
+@mixin box-shadow{
+    box-shadow: var(--box-shadow,0px 0px 30px 5px var(--theme-color-black, #363538));
+}
+
+/* animations */
 @mixin slide-in($x, $y, $z, $name) {
     @keyframes #{$name}{
         from{
@@ -68,6 +79,34 @@
     }
 }
 
+@mixin zoom-landscape($from, $to, $name) {
+    @keyframes #{$name} {
+        from {
+            height: auto;
+            width: #{$from};
+        }
+        to {
+            height: auto;
+            width: #{$to};
+        }
+    }
+}
+
+@mixin lens($from-height, $from-width, $to-height, $to-width, $name) {
+    @keyframes #{$name} {
+        from {
+            height: #{$from-height};
+            width: #{$from-width};
+        }
+        to {
+            height: #{$to-height};
+            width: #{$to-width};
+            background-color: var(--theme-color-black, #363538);
+            opacity: 0.2;
+        }
+    }
+}
+
 @mixin fa-icon-list-addition($icons, $path: "") {
     $i: 1;
     @each $icon in $icons{
@@ -78,12 +117,6 @@
         }
         $i: $i + 1;
     }
-}
-
-@mixin dark-background {
-    background-color: var(--theme-color-black, #363538);
-    color: var(--theme-color-white, #F6F6F6);
-    opacity: 0.95;
 }
 
 @mixin img-in-wrap-positioning($height, $width){
