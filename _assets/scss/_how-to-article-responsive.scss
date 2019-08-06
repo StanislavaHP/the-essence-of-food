@@ -1,25 +1,9 @@
-@media (max-width:960px) {
-    .site-main-how-to-article .content{
+.site-main-how-to-article .content  {
+    @include bp(laptop) {
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
-
-    .site-main-how-to-article .content .tips-tricks{
-        grid-row: 2;
-        grid-column: 1;
-    }
-
 }
 
-@media (max-width:768px) {
-    .site-main-how-to-article .content h2{
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width:640px) {
-}
-
-@media (max-width:480px) {
-}
 

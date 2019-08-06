@@ -16,6 +16,9 @@
   --box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538); }
 
 /* animations */
+/* icons */
+/* images */
+/* how-to layout and recipes template */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -667,20 +670,16 @@ a:hover {
   bottom: 100%;
   transition: top 1s linear, bottom 1s linear; }
 
-.site-main-recipe {
-  z-index: 1; }
-  .site-main-recipe input[type="checkbox"] {
-    display: none; }
-  .site-main-recipe .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: -webkit-max-content;
-    grid-template-rows: max-content;
-    margin: 4rem 2rem;
-    background-image: url("https://images.pexels.com/photos/2180090/pexels-photo-2180090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-size: cover;
-    position: relative;
-    z-index: 2; }
+.site-main-recipe .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  margin: 4rem 2rem;
+  background-image: url(https://images.pexels.com/photos/2180090/pexels-photo-2180090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  position: relative;
+  z-index: 2; }
   .site-main-recipe .content:before {
     content: "";
     position: absolute;
@@ -695,10 +694,14 @@ a:hover {
   .site-main-recipe .content h4 {
     color: var(--theme-color-dark-blue, #408697);
     font-weight: 800; }
+  .site-main-recipe .content ul li {
+    padding: 0.5rem 0; }
   .site-main-recipe .content .instructions,
   .site-main-recipe .content .nutrition-info {
     box-shadow: var(--box-shadow, 0px 0px 30px 5px var(--theme-color-black, #363538));
-    padding: 2rem 2.5rem; }
+    padding: 4rem 2rem; }
+  .site-main-recipe .content input[type="checkbox"] {
+    display: none; }
 
 /*instructions*/
 .site-main-recipe .content .instructions label {
@@ -798,6 +801,10 @@ a:hover {
 @media (max-width: 640px) {
   .site-main-recipe .content .nutrition-info .element-info .image {
     height: 25vw; } }
+
+@media (max-width: 480px) {
+  .site-main-recipe .content .nutrition-info .element-info .image {
+    height: 30vw; } }
 
 .site-main-food-profile .fun-facts,
 .site-main-food-profile .key-sources {
@@ -967,75 +974,58 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: -webkit-max-content;
   grid-template-rows: max-content;
-  margin: 2rem;
-  background-image: url("https://images.pexels.com/photos/1478524/pexels-photo-1478524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  margin: 4rem 2rem;
+  background-image: url(https://images.pexels.com/photos/1478524/pexels-photo-1478524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
-  position: relative; }
-
-.site-main-how-to-article .content:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(246, 246, 246, 0.75);
-  z-index: 1; }
-
-.site-main-how-to-article .content h4 {
-  color: var(--theme-color-dark-blue, #408697);
-  font-weight: 800;
-  height: 5rem; }
-
-.site-main-how-to-article .content ul li {
-  padding: 1rem 0; }
-
-.site-main-how-to-article .content .the-basics,
-.site-main-how-to-article .content .tips-tricks {
-  box-shadow: 0px 0px 30px 5px var(--theme-color-black, #363538);
-  padding: 2rem 4rem;
+  position: relative;
   z-index: 2; }
+  .site-main-how-to-article .content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(246, 246, 246, 0.5);
+    z-index: -1; }
+  .site-main-how-to-article .content h4 {
+    color: var(--theme-color-dark-blue, #408697);
+    font-weight: 800; }
+  .site-main-how-to-article .content ul li {
+    padding: 0.5rem 0; }
+  .site-main-how-to-article .content .the-basics,
+  .site-main-how-to-article .content .tips-tricks {
+    box-shadow: var(--box-shadow, 0px 0px 30px 5px var(--theme-color-black, #363538));
+    padding: 4rem 2rem; }
+  .site-main-how-to-article .content h4 {
+    height: 6rem; }
 
 /*the-basics*/
-.site-main-how-to-article .content .the-basics {
-  grid-column: 1; }
-
-.site-main-how-to-article .content .the-basics ul li .steps {
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--theme-color-dark-blue, #408697);
-  padding-right: 1rem; }
-
+.site-main-how-to-article .content .the-basics ul li .steps,
 .site-main-how-to-article .content .the-basics p {
   font-size: 1.5rem;
   font-weight: 800;
-  padding: 2rem 0; }
+  text-transform: uppercase; }
+
+.site-main-how-to-article .content .the-basics ul li .steps {
+  color: var(--theme-color-dark-blue, #408697);
+  padding-right: 1rem; }
 
 /* tips-tricks */
-.site-main-how-to-article .content .tips-tricks {
-  grid-column: 2; }
-
 .site-main-how-to-article .content .tips-tricks ul li:before {
   content: "\f164";
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 800;
   font-size: 1.5rem;
+  padding-right: 1rem;
   color: var(--theme-color-dark-blue, #408697); }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .site-main-how-to-article .content {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; }
-  .site-main-how-to-article .content .tips-tricks {
-    grid-row: 2;
-    grid-column: 1; } }
-
-@media (max-width: 768px) {
-  .site-main-how-to-article .content h2 {
-    font-size: 2.5rem; } }
+    grid-template-rows: 1fr 1fr; } }
 
 .site-main-nutrient-profile i {
   padding: 1rem;

@@ -14,5 +14,12 @@
             height: 25vw;
         }
     }
+
+    @include bp(phone-medium) {
+
+        .nutrition-info .element-info .image{
+            height: 30vw;
+        }
+    }
 }
 
