@@ -1,0 +1,35 @@
+
+.gallery-content {
+    @include bp(tablet-large) {
+      grid-template-columns: repeat(3, 25vw);
+    }
+  
+    @include bp(phone-large) {
+      grid-template-columns: repeat(2, 40vw);
+    }
+  
+    @include bp(phone-medium) {
+      display: flex;
+      flex-flow: column nowrap;
+  
+      .image-article:nth-of-type(n + 0) {
+        padding-top: 70%;
+        img {
+            height: 100%;
+            width: auto;
+          }
+      }
+
+      .image-article:nth-of-type(n + 0):hover img{
+          animation: zoom-in-p 1.5s ease;
+      }
+      
+      .image-article:nth-of-type(n + 0) img{
+          animation: zoom-out-p 0.5s ease;
+      }
+
+      @include zoom-portrait(100%,125%,"zoom-in-p");
+      @include zoom-portrait(125%,100%,"zoom-out-p");
+    }
+  }
+  

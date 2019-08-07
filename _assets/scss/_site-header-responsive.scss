@@ -35,6 +35,10 @@
                 z-index: 2;
             }
 
+            &>li:hover>a{
+                text-align: right;
+            }
+
             &>li:hover>ul {
                 display: flex;
                 flex-flow: column nowrap;
@@ -46,6 +50,23 @@
                 z-index: 3;
                 
                 border-top: 0.15rem solid var(--theme-color-dark-blue, #408697);
+            }
+        }
+    }
+
+    @include bp(phone-medium){
+        /* when the menu icon is clicked display the nav options */
+        #menu:checked~.site-nav-options {
+
+            &>li a{
+                text-align: right;
+            }
+            
+            &>li>ul {
+                position: static;
+                align-items: flex-end;
+                border-top: 0.15rem solid var(--theme-color-dark-blue, #408697);
+                width: 40vw;
             }
         }
     }

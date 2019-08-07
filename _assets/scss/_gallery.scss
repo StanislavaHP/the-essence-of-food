@@ -64,22 +64,3 @@
 	}
   }
 }
-
-.gallery-content {
-  @include bp(tablet-large) {
-	grid-template-columns: repeat(3, 25vw);
-  }
-
-  @include bp(phone-large) {
-	grid-template-columns: repeat(2, 40vw);
-  }
-
-  @include bp(phone-medium) {
-	display: flex;
-	flex-flow: column nowrap;
-
-	.image-article:nth-of-type(n + 0) {
-	  padding-top: 80%;
-	}
-  }
-}

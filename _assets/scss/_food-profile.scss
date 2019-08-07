@@ -46,8 +46,7 @@
 
 /* fun-facts */
 .site-main-food-profile .fun-facts{
-    &>p
-    {
+    p{
         text-align: right;
         font-style: italic;
         @include dark-background(0.5);
@@ -56,7 +55,6 @@
 
     .food-fact{
         position: relative;
-        padding: 0.5rem 0;
 
         .image {
             width: auto;
