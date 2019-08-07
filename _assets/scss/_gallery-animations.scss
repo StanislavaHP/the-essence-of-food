@@ -1,0 +1,53 @@
+.gallery-content{
+    .image-article {
+        border-color: border-color 1s ease-in;
+
+        &:hover{
+            border-color: transparent;
+        }
+    }
+
+    .image-article:hover img,
+    .image-article:hover img{
+        animation: zoom-in-p 1.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .image-article img,
+    .image-article img{
+        animation: zoom-out-p 0.5s ease;
+        animation-fill-mode: both;
+    }
+
+    .image-article:nth-of-type(9n + 2):hover img,
+    .image-article:nth-of-type(9n + 6):hover img{
+        animation: zoom-in 1.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .image-article:nth-of-type(9n + 2) img,
+    .image-article:nth-of-type(9n + 6) img{
+        animation: zoom-out 0.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .image-article:hover:before {
+        animation: lens 1.5s ease;
+        animation-fill-mode: both;
+    }
+    
+    .image-article:before {
+        animation: lens-out 0.5s ease;
+        animation-fill-mode: both;
+    }
+}
+
+
+@include zoom-landscape(100%,125%,"zoom-in");
+@include zoom-landscape(125%,100%,"zoom-out");
+
+@include zoom-portrait(100%,125%,"zoom-in-p");
+@include zoom-portrait(125%,100%,"zoom-out-p");
+
+@include lens(0.000001rem, 0.000001rem, 100%, 100%, "lens-out");
+@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens");

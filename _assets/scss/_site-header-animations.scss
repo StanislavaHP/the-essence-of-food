@@ -7,7 +7,7 @@
     $delay: 0.05;
     @for $i from 2 through 6 {
       li:nth-of-type(#{$i})>a {
-        animation-delay: $delay;
+        animation-delay: (#{$delay}s);
       }
          $delay: $delay+0.05;
     }

@@ -2,9 +2,10 @@
 .site-main-default {
     @include bp(tablet-large) {
 
-        .about-us-content main{
+        .about-us-content .thesis{
             display: flex;
             flex-flow: column nowrap;
+            
         }
 
         .gallery {

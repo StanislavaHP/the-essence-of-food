@@ -14,6 +14,17 @@ $opacity: 0.9;
     .recipes>p {
         padding-bottom: 2rem;
     }
+
+    .perfect-recipe{
+        .gallery article .text,
+        .gallery article img{
+            opacity: 1;
+        }
+
+        .gallery article .image{
+            border-color: transparent;
+        }
+    }
     
     .gallery {
         display: grid;
@@ -29,13 +40,6 @@ $opacity: 0.9;
         color: var(--theme-color-white, #F6F6F6);
         border: 0.75rem double transparent;
         @include box-shadow;
-
-        &:before{
-            content: "";
-            position: absolute;
-            top:0;left:0;right:0;bottom:0;
-            z-index: 2;
-        }
     }
 
     /* image */

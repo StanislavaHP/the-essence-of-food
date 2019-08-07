@@ -1,0 +1,36 @@
+---
+title: Gallery
+layout: default
+permalink: "/gallery/"
+
+rank: 5.5
+
+img: https://images.pexels.com/photos/843226/pexels-photo-843226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+img-description: camera
+subject: Gallery
+
+header: 1
+---
+
+<div class="gallery-content">
+
+        {% assign category_pages = site.pages | where:"layout","recipe" %}
+        {% for page in category_pages %}
+        <div class="image-article image">
+            <img src="{{page.img}}" alt="img-description">
+        </div>
+        {% endfor %}
+        {% assign category_pages = site.pages | where:"layout","nutrient-profile" %}
+        {% for page in category_pages %}
+        <div class="image-article image">
+            <img src="{{page.img}}" alt="img-description">
+        </div>
+        {% endfor %}
+        {% assign category_pages = site.pages | where:"layout","food-profile" %}
+        {% for page in category_pages %}
+        <div class="image-article image">
+            <img src="{{page.img}}" alt="img-description">
+        </div>
+        {% endfor %}
+
+</div>

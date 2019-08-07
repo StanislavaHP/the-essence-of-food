@@ -18,13 +18,28 @@
 
     z-index: 3;
 
-    i{
-        font-size: 3rem;
+    font-size: 0.85rem;
+
+    .site-logo{
+        font-size: 0;
+
+        position: relative;
+        
+        @include fa-single-icon-list-addition('\f4d8');
+
+        &:before{
+            font-size: 2rem;
+
+            position: absolute;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+        }
     }
     
     .site-nav-menu i{
         position: absolute;
         top: -100%;
+        font-size: 3rem;
     }
     
     #menu{

@@ -9,6 +9,10 @@
     border: 0.8rem double rgba(246, 246, 246, 0);
     @include box-shadow;
 
+    h6{
+        display: none;
+    }
+
     .image-article {
         position: relative;
     }

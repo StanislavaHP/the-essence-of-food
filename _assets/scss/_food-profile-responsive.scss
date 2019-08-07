@@ -22,7 +22,7 @@
   }
 
   @include bp(phone-large) {
-    .food-facts .food-fact p {
+    .fun-facts .food-fact h6 {
       font-size: 1rem;
     }
   }

@@ -1,49 +1,28 @@
-@media (max-width:960px) {
+.site-main-nutrient-profile .key-sources ul {
+  @include bp(tablet-large) {
+    grid-template-columns: 20% repeat(4, 1fr) 20%;
 
-    .site-main-nutrient-profile .key-sources ul li .text .stat-base{
-        font-size: 0.75rem;
+    li.mid.v-img.expand {
+      grid-row: span 3;
+    }
+  }
+
+  @include bp(phone-large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10, 30vw);
+    align-items: stretch;
+
+    li.mid.v-img.expand,
+    li.mid.h-img,
+    li.mid.v-img {
+      grid-row: span 1;
+      grid-column: 1/-1;
     }
 
-    .site-main-nutrient-profile .key-sources ul {
-        grid-template-columns: 20% repeat(4,1fr) 20%;
+    li.mid.v-img img {
+      width: 100%;
+      height: auto;
     }
-
-    .site-main-nutrient-profile .key-sources ul li.mid.v-img.expand {
-        grid-row: span 3;
-    }
-}
-
-@media (max-width:768px) {
-    .site-main-nutrient-profile h2{
-        font-size: 2rem;
-    }
-
-    .site-main-nutrient-profile .key-sources ul li .text .name{
-        font-size: 0.75rem;
-    }
-}
-
-@media (max-width:640px) {
-
-    .site-main-nutrient-profile .key-sources ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(10, 30vw);
-        align-items: stretch;
-    }
-
-    .site-main-nutrient-profile .key-sources ul li.mid.v-img.expand,
-    .site-main-nutrient-profile .key-sources ul li.mid.h-img,
-    .site-main-nutrient-profile .key-sources ul li.mid.v-img{
-        grid-row: span 1;
-        grid-column: 1/-1;
-    }
-
-    .site-main-nutrient-profile .key-sources ul li.mid.v-img img{
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width:480px) {
+  }
 }

@@ -1,7 +1,7 @@
 
 .site-main-recipe .content{
     $image: "https://images.pexels.com/photos/2180090/pexels-photo-2180090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
-    $page1: ".instructions";
+    $page1: ".recipe";
     $page2: ".nutrition-info";
     @include notebook-template($image, $page1,$page2);
     
@@ -11,7 +11,7 @@
 }
 
 /*instructions*/
-.site-main-recipe .content .instructions{
+.site-main-recipe .content .recipe{
     label{
         cursor: pointer;
     }
@@ -27,11 +27,13 @@
 
         li{
             display: grid;
-            grid-template-columns: 15% 85%; 
+            grid-template-columns: 5% 85%; 
 
             .recipe-ingredient{
                 display: grid;
-                grid-template-columns: 20% 80%;
+                grid-template-columns: 20% 70%;
+                grid-column-gap: 0.25rem;
+                text-align: right;
             }
         }
     }

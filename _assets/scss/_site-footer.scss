@@ -3,6 +3,8 @@ $footer-contact-icons: ("\f2a0","\f0e0","\f5a0");
 $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 
 .site-footer {
+    font-size: 0.85rem;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -14,9 +16,13 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 
     padding: 1rem 2rem;
 
+    h4,h6,li{
+        font-size: 0.85rem;
+    }
     h4{
         color: var(--theme-color-dark-blue, #408697);
         font-weight: 600;
+        font-size: 1rem;
     }
     
     :before{

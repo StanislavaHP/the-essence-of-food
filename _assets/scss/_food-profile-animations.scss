@@ -1,11 +1,11 @@
 .site-main-food-profile input[type="checkbox"]:checked{
-    &~.toggle-section-fun-facts, 
-    &~.toggle-section-key-sources, 
-    &~.toggle-section-key-sources ul>li {
+    &~.toggle-fun-facts, 
+    &~.toggle-key-sources, 
+    &~.toggle-key-sources ul>li {
         animation: slide-in-right 1s ease;
     }
     
-    &~.toggle-section-key-sources ul{
+    &~.toggle-key-sources ul{
         $delay: 0.1;
         @for $i from 2 through 5 {
           li:nth-of-type(#{$i}) {
@@ -17,8 +17,8 @@
     
     @include slide-in(100%,0,0,'slide-in-right');
     
-    &~.toggle-section-fun-facts .food-facts,
-    &~.toggle-section-key-sources ul>li {
+    &~.toggle-fun-facts .food-fact,
+    &~.toggle-key-sources ul>li {
         animation: scale 1s linear;
         animation-delay: 0.1s;
     }
