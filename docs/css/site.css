@@ -1626,6 +1626,24 @@ a:hover {
               animation-direction: alternate;
       -webkit-animation-fill-mode: both;
               animation-fill-mode: both; }
+    .gallery-content .image-article:hover:before {
+      -webkit-animation: lens 1s ease;
+              animation: lens 1s ease;
+      -webkit-animation-iteration-count: 2;
+              animation-iteration-count: 2;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
+    .gallery-content .image-article:before {
+      -webkit-animation: lens-out 1s ease;
+              animation: lens-out 1s ease;
+      -webkit-animation-iteration-count: 0;
+              animation-iteration-count: 0;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
   @-webkit-keyframes zoom-in-p {
     from {
       height: 100%;
@@ -1653,7 +1671,35 @@ a:hover {
       width: auto; }
     to {
       height: 100%;
-      width: auto; } } }
+      width: auto; } }
+  @-webkit-keyframes lens {
+    from {
+      height: 100%;
+      width: 100%; }
+    to {
+      height: 0rem;
+      width: 0rem; } }
+  @keyframes lens {
+    from {
+      height: 100%;
+      width: 100%; }
+    to {
+      height: 0rem;
+      width: 0rem; } }
+  @-webkit-keyframes lens-out {
+    from {
+      height: 100%;
+      width: 100%; }
+    to {
+      height: 0rem;
+      width: 0rem; } }
+  @keyframes lens-out {
+    from {
+      height: 100%;
+      width: 100%; }
+    to {
+      height: 0rem;
+      width: 0rem; } } }
 
 .head-picture {
   z-index: -1;

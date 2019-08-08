@@ -35,7 +35,18 @@
 			@include default-animation("zoom-out-p", 0);
 		}
 
+		.image-article:hover:before {
+			@include default-animation("lens",2);
+		}
+
+		.image-article:before {
+			@include default-animation("lens-out",0);
+		}
+
 			@include lens(100%, auto, 150%, auto, "zoom-in-p");
 			@include lens(150%, auto, 100%, auto, "zoom-out-p");
+
+			@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens");
+			@include lens(100%, 100%, 0.000001rem, 0.000001rem, "lens-out");
 		}
 }

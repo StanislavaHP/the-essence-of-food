@@ -33,7 +33,7 @@
                 {% for page in category_children %}
                 <div class="image-article image">
                     <img src="{{page.img}}" alt="img-description">
-                    <a href="{{ site.baseurl }}{{page.url}}">{{ page.title }}</a>
+                    <a href="javascript:delay('{{ site.baseurl }}{{page.url}}')">{{ page.title }}</a>
                 </div>
                 {% endfor %}
             </section>
