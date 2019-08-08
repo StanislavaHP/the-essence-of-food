@@ -1,11 +1,11 @@
 .site-main-default {
     .perfect-recipe .gallery article:hover .image img {
-        animation: zoom-in 1.5s ease;
+        animation: zoom-in-recipe 1.5s ease;
         animation-fill-mode: both;
     }
     
     .perfect-recipe .gallery article .image img {
-        animation: zoom-out 0.5s ease;
+        animation: zoom-out-recipe 0.5s ease;
         animation-fill-mode: both;
     }
 
@@ -26,10 +26,11 @@
             opacity: 1;
         }
     }
+
+    @include lens(auto,100%,auto,125%,"zoom-in-recipe");
+    @include lens(auto,125%,auto,100%,"zoom-out-recipe");
 }
 
-@include zoom-landscape(100%,125%,"zoom-in");
-@include zoom-landscape(125%,100%,"zoom-out");
 
 .site-main-default {
     @include bp(phone-medium){

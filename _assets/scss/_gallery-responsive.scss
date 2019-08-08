@@ -1,35 +1,41 @@
-
 .gallery-content {
-    @include bp(tablet-large) {
-      grid-template-columns: repeat(3, 25vw);
-    }
-  
-    @include bp(phone-large) {
-      grid-template-columns: repeat(2, 40vw);
-    }
-  
-    @include bp(phone-medium) {
-      display: flex;
-      flex-flow: column nowrap;
-  
-      .image-article:nth-of-type(n + 0) {
-        padding-top: 70%;
-        img {
-            height: 100%;
-            width: auto;
-          }
-      }
+	@include bp(tablet-large) {
+		grid-template-columns: repeat(3, 25vw);
+	}
 
-      .image-article:nth-of-type(n + 0):hover img{
-          animation: zoom-in-p 1.5s ease;
-      }
-      
-      .image-article:nth-of-type(n + 0) img{
-          animation: zoom-out-p 0.5s ease;
-      }
+	@include bp(phone-large) {
+		grid-template-columns: repeat(2, 40vw);
+	}
 
-      @include zoom-portrait(100%,150%,"zoom-in-p");
-      @include zoom-portrait(150%,100%,"zoom-out-p");
-    }
-  }
-  
+	@include bp(phone-medium) {
+		display: flex;
+		flex-flow: column nowrap;
+
+		.image-article:nth-of-type(n + 0) {
+			padding-top: 70%;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		.image-article:nth-of-type(n + 0):hover img {
+			animation: zoom-in-p 1.5s ease;
+		}
+
+		.image-article:nth-of-type(n + 0) img {
+			animation: zoom-out-p 0.5s ease;
+		}
+
+		.image-article:nth-of-type(n + 0):hover img {
+			@include default-animation("zoom-in-p", 2);
+		}
+
+		.image-article:nth-of-type(n + 0) img {
+			@include default-animation("zoom-out-p", 0);
+		}
+
+			@include lens(100%, auto, 150%, auto, "zoom-in-p");
+			@include lens(150%, auto, 100%, auto, "zoom-out-p");
+		}
+}

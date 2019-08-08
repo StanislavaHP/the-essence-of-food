@@ -23,7 +23,7 @@
         animation-delay: 0.1s;
     }
     
-    @include scale;
+    @include lens(0,0,100%,100%,"scale");
 }
 
 

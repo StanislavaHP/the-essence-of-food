@@ -1,8 +1,8 @@
 .site-main-category-introduction .gallery .image-article{
     a{
-        transition: opacity 0.1 linear,
-                    width 0.1s linear,
-                    height 0.1s linear;
+        transition: width 0.5s linear,
+                    height 0.5s linear;
+                    transition-delay: 0.75s
     }
 
     &:hover a{

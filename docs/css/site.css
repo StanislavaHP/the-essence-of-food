@@ -629,14 +629,14 @@ a:hover {
       font-weight: 800; }
 
 .site-main-default .perfect-recipe .gallery article:hover .image img {
-  -webkit-animation: zoom-in 1.5s ease;
-          animation: zoom-in 1.5s ease;
+  -webkit-animation: zoom-in-recipe 1.5s ease;
+          animation: zoom-in-recipe 1.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .site-main-default .perfect-recipe .gallery article .image img {
-  -webkit-animation: zoom-out 0.5s ease;
-          animation: zoom-out 0.5s ease;
+  -webkit-animation: zoom-out-recipe 0.5s ease;
+          animation: zoom-out-recipe 0.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
@@ -651,7 +651,7 @@ a:hover {
   .site-main-default .gallery article .image:hover ~ .text {
     opacity: 1; }
 
-@-webkit-keyframes zoom-in {
+@-webkit-keyframes zoom-in-recipe {
   from {
     height: auto;
     width: 100%; }
@@ -659,7 +659,7 @@ a:hover {
     height: auto;
     width: 125%; } }
 
-@keyframes zoom-in {
+@keyframes zoom-in-recipe {
   from {
     height: auto;
     width: 100%; }
@@ -667,7 +667,7 @@ a:hover {
     height: auto;
     width: 125%; } }
 
-@-webkit-keyframes zoom-out {
+@-webkit-keyframes zoom-out-recipe {
   from {
     height: auto;
     width: 125%; }
@@ -675,7 +675,7 @@ a:hover {
     height: auto;
     width: 100%; } }
 
-@keyframes zoom-out {
+@keyframes zoom-out-recipe {
   from {
     height: auto;
     width: 125%; }
@@ -763,7 +763,8 @@ a:hover {
     font-weight: 800; }
 
 .site-main-category-introduction .gallery .image-article a {
-  transition: opacity 0.1 linear, width 0.1s linear, height 0.1s linear; }
+  transition: width 0.5s linear, height 0.5s linear;
+  transition-delay: 0.75s; }
 
 .site-main-category-introduction .gallery .image-article:hover a {
   opacity: 0;
@@ -1063,19 +1064,19 @@ a:hover {
 
 @-webkit-keyframes scale {
   from {
-    width: 0;
-    height: 0; }
+    height: 0;
+    width: 0; }
   to {
-    width: 100%;
-    height: 100%; } }
+    height: 100%;
+    width: 100%; } }
 
 @keyframes scale {
   from {
-    width: 0;
-    height: 0; }
+    height: 0;
+    width: 0; }
   to {
-    width: 100%;
-    height: 100%; } }
+    height: 100%;
+    width: 100%; } }
 
 @media (max-width: 960px) {
   .site-main-food-profile .key-sources ul {
@@ -1339,11 +1340,11 @@ a:hover {
 
 @keyframes scale {
   from {
-    width: 0;
-    height: 0; }
+    height: 0;
+    width: 0; }
   to {
-    width: 100%;
-    height: 100%; } }
+    height: 100%;
+    width: 100%; } }
 
 @media (max-width: 960px) {
   .site-main-nutrient-profile .key-sources ul {
@@ -1400,6 +1401,8 @@ a:hover {
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: var(--theme-color-black, #363538);
+      width: 100%;
+      height: 100%;
       opacity: 0.2; }
     .gallery-content .image-article img {
       height: 100%;
@@ -1424,45 +1427,75 @@ a:hover {
   .gallery-content .image-article:hover {
     border-color: transparent; }
 
-.gallery-content .image-article:hover img,
 .gallery-content .image-article:hover img {
-  -webkit-animation: zoom-in-p 2.5s ease;
-          animation: zoom-in-p 2.5s ease;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
-
-.gallery-content .image-article img,
-.gallery-content .image-article img {
-  -webkit-animation: zoom-out-p 2.5s ease;
-          animation: zoom-out-p 2.5s ease;
+  -webkit-animation: zoom-in-p 1s ease;
+          animation: zoom-in-p 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article:nth-of-type(9n + 2):hover img,
 .gallery-content .image-article:nth-of-type(9n + 6):hover img {
-  -webkit-animation: zoom-in 2.5s ease;
-          animation: zoom-in 2.5s ease;
+  -webkit-animation: zoom-in 1s ease;
+          animation: zoom-in 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.gallery-content .image-article:hover:before {
+  -webkit-animation: lens 1s ease;
+          animation: lens 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.gallery-content .image-article img {
+  -webkit-animation: zoom-out-p 1s ease;
+          animation: zoom-out-p 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article:nth-of-type(9n + 2) img,
 .gallery-content .image-article:nth-of-type(9n + 6) img {
-  -webkit-animation: zoom-out 2.5s ease;
-          animation: zoom-out 2.5s ease;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
-
-.gallery-content .image-article:hover:before {
-  -webkit-animation: lens 1.5s ease;
-          animation: lens 1.5s ease;
+  -webkit-animation: zoom-out 1s ease;
+          animation: zoom-out 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article:before {
-  -webkit-animation: lens-out 0.5s ease;
-          animation: lens-out 0.5s ease;
+  -webkit-animation: lens-out 1s ease;
+          animation: lens-out 1s ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
+
+@-webkit-keyframes zoom-in {
+  from {
+    height: auto;
+    width: 100%; }
+  to {
+    height: auto;
+    width: 150%; } }
 
 @keyframes zoom-in {
   from {
@@ -1470,12 +1503,20 @@ a:hover {
     width: 100%; }
   to {
     height: auto;
-    width: 125%; } }
+    width: 150%; } }
+
+@-webkit-keyframes zoom-out {
+  from {
+    height: auto;
+    width: 150%; }
+  to {
+    height: auto;
+    width: 100%; } }
 
 @keyframes zoom-out {
   from {
     height: auto;
-    width: 125%; }
+    width: 150%; }
   to {
     height: auto;
     width: 100%; } }
@@ -1485,7 +1526,7 @@ a:hover {
     height: 100%;
     width: auto; }
   to {
-    height: 125%;
+    height: 150%;
     width: auto; } }
 
 @keyframes zoom-in-p {
@@ -1493,12 +1534,12 @@ a:hover {
     height: 100%;
     width: auto; }
   to {
-    height: 125%;
+    height: 150%;
     width: auto; } }
 
 @-webkit-keyframes zoom-out-p {
   from {
-    height: 125%;
+    height: 150%;
     width: auto; }
   to {
     height: 100%;
@@ -1506,27 +1547,11 @@ a:hover {
 
 @keyframes zoom-out-p {
   from {
-    height: 125%;
+    height: 150%;
     width: auto; }
   to {
     height: 100%;
     width: auto; } }
-
-@-webkit-keyframes lens-out {
-  from {
-    height: 0rem;
-    width: 0rem; }
-  to {
-    height: 100%;
-    width: 100%; } }
-
-@keyframes lens-out {
-  from {
-    height: 0rem;
-    width: 0rem; }
-  to {
-    height: 100%;
-    width: 100%; } }
 
 @-webkit-keyframes lens {
   from {
@@ -1537,6 +1562,22 @@ a:hover {
     width: 0rem; } }
 
 @keyframes lens {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 0rem;
+    width: 0rem; } }
+
+@-webkit-keyframes lens-out {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 0rem;
+    width: 0rem; } }
+
+@keyframes lens-out {
   from {
     height: 100%;
     width: 100%; }
@@ -1567,6 +1608,24 @@ a:hover {
     .gallery-content .image-article:nth-of-type(n + 0) img {
       -webkit-animation: zoom-out-p 0.5s ease;
               animation: zoom-out-p 0.5s ease; }
+    .gallery-content .image-article:nth-of-type(n + 0):hover img {
+      -webkit-animation: zoom-in-p 1s ease;
+              animation: zoom-in-p 1s ease;
+      -webkit-animation-iteration-count: 2;
+              animation-iteration-count: 2;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
+    .gallery-content .image-article:nth-of-type(n + 0) img {
+      -webkit-animation: zoom-out-p 1s ease;
+              animation: zoom-out-p 1s ease;
+      -webkit-animation-iteration-count: 0;
+              animation-iteration-count: 0;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
   @-webkit-keyframes zoom-in-p {
     from {
       height: 100%;
