@@ -1,11 +1,14 @@
 .site-main-category-introduction .gallery .image-article{
-    p{
-        transition: opacity 0.25s linear;
+    a{
+        transition: opacity 0.1 linear,
+                    width 0.1s linear,
+                    height 0.1s linear;
     }
 
-    &:hover p{
+    &:hover a{
         opacity: 0;
-        font-size: 0.00001rem;
+        width: 100%;
+        height: 100%;
     }
     
     &:before {

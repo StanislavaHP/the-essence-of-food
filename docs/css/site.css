@@ -53,7 +53,8 @@ select:hover, option:hover,
   text-decoration: none;
   text-align: left;
   color: inherit;
-  outline: none; }
+  outline: none;
+  background-color: none; }
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -72,7 +73,8 @@ select:hover, option:hover,
   text-decoration: none;
   text-align: left;
   color: inherit;
-  outline: none; }
+  outline: none;
+  background-color: none; }
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -91,7 +93,8 @@ select:hover, option:hover,
   text-decoration: none;
   text-align: left;
   color: inherit;
-  outline: none; }
+  outline: none;
+  background-color: none; }
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -110,7 +113,8 @@ select:hover, option:hover,
   text-decoration: none;
   text-align: left;
   color: inherit;
-  outline: none; }
+  outline: none;
+  background-color: none; }
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -129,7 +133,8 @@ select:hover, option:hover,
   text-decoration: none;
   text-align: left;
   color: inherit;
-  outline: none; }
+  outline: none;
+  background-color: none; }
 
 ol, ul {
   list-style: none; }
@@ -635,6 +640,17 @@ a:hover {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+.site-main-default .gallery article .image {
+  transition: border-color 0.6s ease-in; }
+  .site-main-default .gallery article .image:hover {
+    border-color: transparent; }
+  .site-main-default .gallery article .image img,
+  .site-main-default .gallery article .image ~ .text {
+    transition: opacity 0.6s ease-in; }
+  .site-main-default .gallery article .image:hover img,
+  .site-main-default .gallery article .image:hover ~ .text {
+    opacity: 1; }
+
 @-webkit-keyframes zoom-in {
   from {
     height: auto;
@@ -667,17 +683,38 @@ a:hover {
     height: auto;
     width: 100%; } }
 
-@media (min-width: 640px) {
+@media (max-width: 480px) {
   .site-main-default .gallery article .image {
-    transition: border-color 0.6s ease-in; }
-    .site-main-default .gallery article .image:hover {
-      border-color: transparent; }
+    transition: none;
+    -webkit-animation: border-pulse 3s infinite;
+            animation: border-pulse 3s infinite;
+    animation-direction: alternate-reverse; }
     .site-main-default .gallery article .image img,
     .site-main-default .gallery article .image ~ .text {
-      transition: opacity 0.6s ease-in; }
-    .site-main-default .gallery article .image:hover img,
-    .site-main-default .gallery article .image:hover ~ .text {
+      transition: none;
+      -webkit-animation: color-pulse 3s infinite;
+              animation: color-pulse 3s infinite;
+      animation-direction: alternate-reverse; }
+  @-webkit-keyframes border-pulse {
+    from {
+      border-color: rgba(54, 53, 56, 0.9); }
+    to {
+      border-color: transparent; } }
+  @keyframes border-pulse {
+    from {
+      border-color: rgba(54, 53, 56, 0.9); }
+    to {
+      border-color: transparent; } }
+  @-webkit-keyframes color-pulse {
+    from {
+      opacity: 0.9; }
+    to {
       opacity: 1; } }
+  @keyframes color-pulse {
+    from {
+      opacity: 0.9; }
+    to {
+      opacity: 1; } } }
 
 @media (max-width: 960px) {
   .site-main-default .about-us-content .thesis {
@@ -714,7 +751,8 @@ a:hover {
     opacity: 0.75;
     border-bottom: 0.15rem solid var(--theme-color-dark-blue, #408697);
     z-index: 1; }
-  .site-main-category-introduction .gallery .image-article p {
+  .site-main-category-introduction .gallery .image-article a {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -724,12 +762,13 @@ a:hover {
     font-size: 2rem;
     font-weight: 800; }
 
-.site-main-category-introduction .gallery .image-article p {
-  transition: opacity 0.25s linear; }
+.site-main-category-introduction .gallery .image-article a {
+  transition: opacity 0.1 linear, width 0.1s linear, height 0.1s linear; }
 
-.site-main-category-introduction .gallery .image-article:hover p {
+.site-main-category-introduction .gallery .image-article:hover a {
   opacity: 0;
-  font-size: 0.00001rem; }
+  width: 100%;
+  height: 100%; }
 
 .site-main-category-introduction .gallery .image-article:before {
   transition: top 1s linear, bottom 1s linear; }
@@ -789,7 +828,7 @@ a:hover {
   grid-template-columns: 50% 50%; }
   .site-main-recipe .content .recipe .recipe-ingredients ul li {
     display: grid;
-    grid-template-columns: 5% 85%; }
+    grid-template-columns: 12% 78%; }
     .site-main-recipe .content .recipe .recipe-ingredients ul li .recipe-ingredient {
       display: grid;
       grid-template-columns: 20% 70%;
@@ -1381,35 +1420,35 @@ a:hover {
       width: 100%; }
 
 .gallery-content .image-article {
-  border-color: border-color 1s ease-in; }
+  transition: border-color 1s ease-in; }
   .gallery-content .image-article:hover {
     border-color: transparent; }
 
 .gallery-content .image-article:hover img,
 .gallery-content .image-article:hover img {
-  -webkit-animation: zoom-in-p 1.5s ease;
-          animation: zoom-in-p 1.5s ease;
+  -webkit-animation: zoom-in-p 2.5s ease;
+          animation: zoom-in-p 2.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article img,
 .gallery-content .image-article img {
-  -webkit-animation: zoom-out-p 0.5s ease;
-          animation: zoom-out-p 0.5s ease;
+  -webkit-animation: zoom-out-p 2.5s ease;
+          animation: zoom-out-p 2.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article:nth-of-type(9n + 2):hover img,
 .gallery-content .image-article:nth-of-type(9n + 6):hover img {
-  -webkit-animation: zoom-in 1.5s ease;
-          animation: zoom-in 1.5s ease;
+  -webkit-animation: zoom-in 2.5s ease;
+          animation: zoom-in 2.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
 .gallery-content .image-article:nth-of-type(9n + 2) img,
 .gallery-content .image-article:nth-of-type(9n + 6) img {
-  -webkit-animation: zoom-out 0.5s ease;
-          animation: zoom-out 0.5s ease;
+  -webkit-animation: zoom-out 2.5s ease;
+          animation: zoom-out 2.5s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
@@ -1533,25 +1572,25 @@ a:hover {
       height: 100%;
       width: auto; }
     to {
-      height: 125%;
+      height: 150%;
       width: auto; } }
   @keyframes zoom-in-p {
     from {
       height: 100%;
       width: auto; }
     to {
-      height: 125%;
+      height: 150%;
       width: auto; } }
   @-webkit-keyframes zoom-out-p {
     from {
-      height: 125%;
+      height: 150%;
       width: auto; }
     to {
       height: 100%;
       width: auto; } }
   @keyframes zoom-out-p {
     from {
-      height: 125%;
+      height: 150%;
       width: auto; }
     to {
       height: 100%;

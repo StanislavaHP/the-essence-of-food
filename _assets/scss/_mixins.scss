@@ -48,12 +48,6 @@
             @content;
         }
     }
-
-    @else if $point == animation-turn-off{
-        @media (min-width: 640px){
-            @content;
-        }
-    }
 }
 
 /* core features */

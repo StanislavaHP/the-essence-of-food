@@ -8,13 +8,7 @@
         animation: zoom-out 0.5s ease;
         animation-fill-mode: both;
     }
-}
 
-@include zoom-landscape(100%,125%,"zoom-in");
-@include zoom-landscape(125%,100%,"zoom-out");
-
-.site-main-default {
-    @include bp(animation-turn-off){
     .gallery article .image{
         transition: border-color 0.6s ease-in;
 
@@ -32,5 +26,44 @@
             opacity: 1;
         }
     }
+}
+
+@include zoom-landscape(100%,125%,"zoom-in");
+@include zoom-landscape(125%,100%,"zoom-out");
+
+.site-main-default {
+    @include bp(phone-medium){
+        .gallery article .image{
+            transition: none;
+            animation: border-pulse 3s infinite;
+            animation-direction: alternate-reverse;
+
+            img,
+            &~.text{
+                transition: none;
+                animation: color-pulse 3s infinite;
+                animation-direction: alternate-reverse;
+            }
+        }
+
+        @keyframes border-pulse{
+            from{
+                border-color: rgba(54,53,56,$opacity);
+            }
+        
+            to{
+                border-color: transparent;
+            }
+        }
+
+        @keyframes color-pulse{
+            from{
+                opacity: 0.9;
+            }
+        
+            to{
+                opacity: 1;
+            }
+        }
     }
 }

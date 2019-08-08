@@ -1,6 +1,6 @@
 .gallery-content{
     .image-article {
-        border-color: border-color 1s ease-in;
+        transition: border-color 1s ease-in;
 
         &:hover{
             border-color: transparent;
@@ -9,25 +9,25 @@
 
     .image-article:hover img,
     .image-article:hover img{
-        animation: zoom-in-p 1.5s ease;
+        animation: zoom-in-p 2.5s ease;
         animation-fill-mode: both;
     }
     
     .image-article img,
     .image-article img{
-        animation: zoom-out-p 0.5s ease;
+        animation: zoom-out-p 2.5s ease;
         animation-fill-mode: both;
     }
 
     .image-article:nth-of-type(9n + 2):hover img,
     .image-article:nth-of-type(9n + 6):hover img{
-        animation: zoom-in 1.5s ease;
+        animation: zoom-in 2.5s ease;
         animation-fill-mode: both;
     }
     
     .image-article:nth-of-type(9n + 2) img,
     .image-article:nth-of-type(9n + 6) img{
-        animation: zoom-out 0.5s ease;
+        animation: zoom-out 2.5s ease;
         animation-fill-mode: both;
     }
     
