@@ -1,5 +1,13 @@
 .site-main-category-introduction .gallery {
     @include bp(phone-large) {
         grid-template-columns: 1fr;
+
+        &:before {
+            transition: top 0.75s linear, bottom 0.75s linear;
+        }
+        
+        &:hover:before{
+            transition: top 0.75s linear, bottom 0.75s linear;
+        }
     }
 }

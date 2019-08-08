@@ -781,7 +781,11 @@ a:hover {
 
 @media (max-width: 640px) {
   .site-main-category-introduction .gallery {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .site-main-category-introduction .gallery:before {
+      transition: top 0.75s linear, bottom 0.75s linear; }
+    .site-main-category-introduction .gallery:hover:before {
+      transition: top 0.75s linear, bottom 0.75s linear; } }
 
 .site-main-recipe .content {
   display: grid;

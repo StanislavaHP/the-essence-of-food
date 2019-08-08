@@ -5,5 +5,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
 })
 
 function delay (URL) {
-    setTimeout( function() { window.location = URL }, 500 );
+    setTimeout( function() { window.location = URL }, 600 );
 }
