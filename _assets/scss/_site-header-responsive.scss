@@ -20,8 +20,6 @@
             display: none;
         }
 
-        /* make the menu icon invisible and really big so we can close the menu by 
-        clicking on any area outside the nav */
         #menu:checked+.site-nav-menu:before {
             content: '\f00d';
         }
