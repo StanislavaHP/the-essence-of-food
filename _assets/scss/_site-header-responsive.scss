@@ -1,11 +1,18 @@
 .site-header {
     @include bp(tablet-large) {
-        .site-nav-menu i {
-            display: block;
-            position: static;
 
-            &:hover{
-                cursor: pointer;
+        .site-nav-menu{
+            display: block;
+            font-size: 0;
+            
+            text-align: right;
+
+            &:before{
+                position: static;
+    
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
 
@@ -15,14 +22,8 @@
 
         /* make the menu icon invisible and really big so we can close the menu by 
         clicking on any area outside the nav */
-        #menu:checked+.site-nav-menu i {
-            opacity: 0;
-    
-            position: absolute;
-            top:0;bottom: 0;left: 0;right: 0;
-            
-            font-size: 400vw;
-            z-index: 1;
+        #menu:checked+.site-nav-menu:before {
+            content: '\f00d';
         }
     
         /* when the menu icon is clicked display the nav options */

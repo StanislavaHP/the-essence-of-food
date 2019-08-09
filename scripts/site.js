@@ -4,6 +4,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 0);
 })
 
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 600 );
+function delay(URL) {
+    if (screen.width <= 700) {
+        setTimeout(function () { window.location = URL }, 600);
+    }
+    else{
+        setTimeout(function () { window.location = URL }, 0);
+    }
 }

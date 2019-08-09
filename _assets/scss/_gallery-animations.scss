@@ -1,5 +1,5 @@
 .gallery-content{
-    .image-article {
+    .image {
         transition: border-color 1s ease-in;
 
         &:hover{
@@ -7,29 +7,29 @@
         }
     }
 
-    .image-article:hover img{
+    .image:hover img{
         @include default-animation("zoom-in-p",1);
     }
 
-    .image-article:nth-of-type(9n + 2):hover img,
-    .image-article:nth-of-type(9n + 6):hover img{
+    .image:nth-of-type(9n + 2):hover img,
+    .image:nth-of-type(9n + 6):hover img{
         @include default-animation("zoom-in",1);
     }
     
-    .image-article:hover:before {
+    .image:hover:before {
         @include default-animation("lens",1);
     }
 
-    .image-article img{
+    .image img{
         @include default-animation("zoom-out-p",1);
     }
 
-    .image-article:nth-of-type(9n + 2) img,
-    .image-article:nth-of-type(9n + 6) img{
+    .image:nth-of-type(9n + 2) img,
+    .image:nth-of-type(9n + 6) img{
         @include default-animation("zoom-out",1);
     }
     
-    .image-article:before {
+    .image:before {
         @include default-animation("lens-out",1);
     }
 }

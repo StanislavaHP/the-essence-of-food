@@ -14,13 +14,10 @@
 
   justify-content: center;
 
-  .image-article {
+  .image {
 	grid-row: span 1;
 	grid-column: span 1;
-	position: relative;
 
-	height: 100%;
-	width: 100%;
 	border: 0.2rem inset var(--theme-color-white);
 	padding-top: 100%;
 
@@ -45,16 +42,16 @@
 	}
   }
 
-  .image-article:nth-of-type(9n + 3),
-  .image-article:nth-of-type(9n + 5) {
+  .image:nth-of-type(9n + 1),
+  .image:nth-of-type(9n + 5) {
 	grid-row: span 2;
 	grid-column: span 1;
 
 	padding-top: 200%;
   }
 
-  .image-article:nth-of-type(9n + 2),
-  .image-article:nth-of-type(9n + 6) {
+  .image:nth-of-type(9n + 2),
+  .image:nth-of-type(9n + 6) {
 	grid-row: span 1;
 	grid-column: span 2;
 

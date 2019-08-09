@@ -16,19 +16,19 @@ header: 1
 
         {% assign category_pages = site.pages | where:"layout","recipe" %}
         {% for page in category_pages %}
-        <div class="image-article image">
+        <div class="image">
             <img src="{{page.img}}" alt="img-description">
         </div>
         {% endfor %}
         {% assign category_pages = site.pages | where:"layout","nutrient-profile" %}
         {% for page in category_pages %}
-        <div class="image-article image">
+        <div class="image">
             <img src="{{page.img}}" alt="img-description">
         </div>
         {% endfor %}
         {% assign category_pages = site.pages | where:"layout","food-profile" %}
         {% for page in category_pages %}
-        <div class="image-article image">
+        <div class="image">
             <img src="{{page.img}}" alt="img-description">
         </div>
         {% endfor %}

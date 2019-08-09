@@ -31,15 +31,20 @@
             font-size: 2rem;
 
             position: absolute;
-            top: 50%; left: 0;
-            transform: translateY(-50%);
+            top: 0; left: 0;
         }
     }
+
+    .site-nav-menu{
+        display: none;
+        
+        @include fa-single-icon-list-addition("\f0c9");
+    }
     
-    .site-nav-menu i{
+    .site-nav-menu:before{
         position: absolute;
         top: -100%;
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     #menu{

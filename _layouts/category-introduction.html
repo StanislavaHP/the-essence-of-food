@@ -31,7 +31,7 @@
                 {% assign category_pages = site.pages | where:"type",page.type %}
                 {% assign category_children = category_pages | where:"layout",page.child-layout %}
                 {% for page in category_children %}
-                <div class="image-article image">
+                <div class="image">
                     <img src="{{page.img}}" alt="img-description">
                     <a href="javascript:delay('{{ site.baseurl }}{{page.url}}')">{{ page.title }}</a>
                 </div>

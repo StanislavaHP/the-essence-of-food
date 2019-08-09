@@ -36,6 +36,25 @@ a:hover{
     color: var(--theme-color-dark-blue, #408697);
 }
 
+.image {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+}
+
+.image {
+    @include img-in-wrap-positioning(auto, 100%);
+}
+
+.site{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
 
 
 

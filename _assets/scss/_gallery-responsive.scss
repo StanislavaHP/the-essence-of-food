@@ -11,7 +11,7 @@
 		display: flex;
 		flex-flow: column nowrap;
 
-		.image-article:nth-of-type(n + 0) {
+		.image:nth-of-type(n + 0) {
 			padding-top: 70%;
 			img {
 				height: 100%;
@@ -19,27 +19,27 @@
 			}
 		}
 
-		.image-article:nth-of-type(n + 0):hover img {
+		.image:nth-of-type(n + 0):hover img {
 			animation: zoom-in-p 1.5s ease;
 		}
 
-		.image-article:nth-of-type(n + 0) img {
+		.image:nth-of-type(n + 0) img {
 			animation: zoom-out-p 0.5s ease;
 		}
 
-		.image-article:nth-of-type(n + 0):hover img {
+		.image:nth-of-type(n + 0):hover img {
 			@include default-animation("zoom-in-p", 2);
 		}
 
-		.image-article:nth-of-type(n + 0) img {
+		.image:nth-of-type(n + 0) img {
 			@include default-animation("zoom-out-p", 0);
 		}
 
-		.image-article:hover:before {
+		.image:hover:before {
 			@include default-animation("lens",2);
 		}
 
-		.image-article:before {
+		.image:before {
 			@include default-animation("lens-out",0);
 		}
 

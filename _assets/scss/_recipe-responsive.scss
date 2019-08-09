@@ -20,6 +20,16 @@
         .nutrition-info .element-info .image{
             height: 30vw;
         }
+
+        .recipe,
+        .nutrition-info{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .recipe .recipe-ingredients ul li {
+            padding: 0.1rem 0;
+        }
     }
 }
 
