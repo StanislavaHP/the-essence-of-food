@@ -352,6 +352,10 @@ a:hover {
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s; }
 
+.site-header > .site-nav > .site-nav-options li:nth-of-type(7) > a {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+
 @-webkit-keyframes slide-in-top {
   from {
     transform: translate3d(0, -100%, 0);

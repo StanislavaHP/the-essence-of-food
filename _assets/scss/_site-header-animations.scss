@@ -5,7 +5,7 @@
 
 .site-header>.site-nav>.site-nav-options{
     $delay: 0.05;
-    @for $i from 2 through 6 {
+    @for $i from 2 through 7 {
       li:nth-of-type(#{$i})>a {
         animation-delay: (#{$delay}s);
       }
