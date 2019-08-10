@@ -34,5 +34,6 @@
 
     @include bp(phone-medium) {
         height: 75vw;
+        @include img-in-wrap-positioning(100%,auto);
     }
 }
