@@ -19,11 +19,11 @@
     }
 
     h1{
-        @include font(25px, 25, 70);
+        @include font(26px, 26, 70);
     }
 
     h3{
-        @include font(13px, 13, 30);
+        @include font(14px, 14, 30);
         color: inherit;
         padding-top: 0;
     }

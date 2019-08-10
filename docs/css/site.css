@@ -137,7 +137,7 @@ ol, ul {
   list-style: none; }
 
 html {
-  font-size: calc(13px + (20 - 13) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+  font-size: calc(12px + (20 - 12) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
   font-family: 'Spectral', serif;
   line-height: 1.5; }
 
@@ -1735,9 +1735,9 @@ a:hover {
     position: absolute;
     bottom: 10%; }
   .head-picture h1 {
-    font-size: calc(25px + (70 - 25) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
+    font-size: calc(26px + (70 - 26) * ((100vw - var(--viewport-min,320px)) / (1600 - 320))); }
   .head-picture h3 {
-    font-size: calc(13px + (30 - 13) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
+    font-size: calc(14px + (30 - 14) * ((100vw - var(--viewport-min,320px)) / (1600 - 320)));
     color: inherit;
     padding-top: 0; }
   @media (max-width: 640px) {
