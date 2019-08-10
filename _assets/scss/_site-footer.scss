@@ -36,7 +36,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
     position: relative;
 
     /* add icons to ul li a:before */
-    @include fa-icon-list-addition($footer-follow-us-icons, " a");
+    @include fa-icon-list-addition($footer-follow-us-icons, " a", "li");
 
     h4,h6{
         text-align: right;

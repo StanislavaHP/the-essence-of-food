@@ -58,14 +58,14 @@
 
         .image {
             padding-top:60%;
-            border: 1rem groove rgba(246, 246, 246, 0.8);
+            @include color-with-opacity("border", var(--theme-color-white-rgba, 246, 246, 246), 0.8, "1rem groove");
         }
 
         h6 {
         position: sticky;
     
-        background-color: rgba(54, 53, 56, 0.8);
-        color:  rgba(246, 246, 246, 0.8);
+        @include color-with-opacity("background-color", var(--theme-color-dark-rgba, 54, 53, 56),0.8);
+        @include color-with-opacity("color", var(--theme-color-white-rgba, 246, 246, 246), 0.8);
      
         width: 100%;
         bottom: 0;

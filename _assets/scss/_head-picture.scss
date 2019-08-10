@@ -10,8 +10,8 @@
     @include img-in-wrap-positioning(auto,100%);
 
     .text{
-        background-color: rgba(54, 53, 56, 0.6);
-        color:  rgba(246, 246, 246, 0.8);
+        @include color-with-opacity("background-color", var(--theme-color-black-rgba, 54, 53, 56), 0.6);
+        @include color-with-opacity("color", var(--theme-color-white-rgba, 246, 246, 246), 0.8);
     
         width: 100%;
         position: absolute;
@@ -19,11 +19,11 @@
     }
 
     h1{
-        @include font(24px, 24, 70);
+        @include font(25px, 25, 70);
     }
 
     h3{
-        @include font(12px, 12, 30);
+        @include font(13px, 13, 30);
         color: inherit;
         padding-top: 0;
     }

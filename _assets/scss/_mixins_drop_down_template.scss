@@ -11,8 +11,8 @@
         font-weight: 900;
         text-transform: uppercase;
 
-        background-color: rgba(54, 53, 56, 0.6);
-        color:  rgba(246, 246, 246, 0.8);
+        @include color-with-opacity("background-color", var(--theme-color-dark-rgba, 54, 53, 56),0.6);
+        @include color-with-opacity("color", var(--theme-color-white-rgba, 246, 246, 246), 0.8);
 
         display: block;
         width: 100%;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
 
 html{
-    @include font(12px, 12, 20);
+    @include font(13px, 13, 20);
     font-family: 'Spectral', serif;
     line-height: 1.5;
 }
@@ -28,11 +28,15 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
-.blue{
+a:hover{
     color: var(--theme-color-dark-blue, #408697);
 }
 
-a:hover{
+.no-hover:hover{
+    color: inherit;
+}
+
+.blue{
     color: var(--theme-color-dark-blue, #408697);
 }
 

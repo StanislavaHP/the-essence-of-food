@@ -1,7 +1,6 @@
 
 .site-main-default {
     @include bp(tablet-large) {
-
         .about-us-content .thesis{
             display: flex;
             flex-flow: column nowrap;
@@ -13,6 +12,41 @@
             grid-template-columns: 1fr;
             grid-template-rows: max-content;
             grid-gap: 1rem;
+        }
+    }
+
+    @include bp(tablet){
+        .gallery article .image{
+            transition: none;
+            animation: border-pulse 3s infinite;
+            animation-direction: alternate-reverse;
+
+            img,
+            &~.text{
+                transition: none;
+                animation: color-pulse 3s infinite;
+                animation-direction: alternate-reverse;
+            }
+        }
+
+        @keyframes border-pulse{
+            from{
+                @include color-with-opacity("border-color", var(--theme-color-black-rgba, 54, 53, 56), $opacity);
+            }
+        
+            to{
+                border-color: transparent;
+            }
+        }
+
+        @keyframes color-pulse{
+            from{
+                opacity: 0.9;
+            }
+        
+            to{
+                opacity: 1;
+            }
         }
     }
 }

@@ -1,9 +1,11 @@
+$contact-us-icons: ("\f46c","\f007","\f0e0","\f036");
+
 /* contact - us */
 .site-main-default .contact-us-content{
     margin: 4rem 2rem;
 
     h4,
-    .button{
+    button{
     @include dark-background(0.8);
     border: var(--blue-border,0.15rem solid var(--theme-color-dark-blue, #408697));
 
@@ -15,24 +17,26 @@
     text-align: center;
     padding: 0.5rem 0;
 
-    letter-spacing: 0.1rem;
+    letter-spacing: var(--letter-spacing, 0.1rem);
+
+    font-family: inherit;
     }
+
+    @include fa-icon-list-addition($contact-us-icons, "", ".row");
 
     .row{
         position: relative;
-    }
-    
-    i{
-        font-size: 1rem;
-        color: var(--theme-color-grey, #8D8C8A);
-        z-index: 1;
-        
-        position: absolute;
-        left: 0.5rem;
-        top: 50%;
-        text-align: center;
-        
-        transform: translateY(-50%);
+
+        &:nth-of-type(n + 0):before{
+            font-size: 1rem;
+            color: var(--theme-color-grey, #8D8C8A);
+            z-index: 1;
+            
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
     
     option,

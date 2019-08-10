@@ -8,7 +8,7 @@
     .introduction,
     .thesis,
     .conclusion{
-        background-color: rgba(54, 53, 56, 0.1);
+        @include color-with-opacity("background-color", var(--theme-color-black-rgba, 54, 53, 56), 0.1);
         width: 100%;
 
         margin: 1.5rem;
@@ -38,8 +38,8 @@
             margin: 2rem 0.25rem;
             padding: 2rem 1rem;
         
-            background-color: rgba(246, 246, 246, 0.5);
-            box-shadow: 0px 0px 20px 20px rgba(246, 246, 246, 0.5);
+            @include color-with-opacity("background-color", var(--theme-color-white-rgba, 246, 246, 246), 0.5);
+            @include color-with-opacity("box-shadow", var(--theme-color-white-rgba, 246, 246, 246), 0.5, "0px 0px 20px 20px");
         }
 
         ol li{

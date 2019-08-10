@@ -26,7 +26,7 @@
     
         width: 100%;
     
-        border: 0.8rem double rgba(246, 246, 246, 0);
+        border: 0.8rem double transparent;
         
         @include box-shadow;
         @include dark-background(0.9);
@@ -56,7 +56,7 @@
             transform: translate(-50%, -50%);
             
             color: var(--theme-color-white, #F6F6F6);
-            background-color: rgba(246, 246, 246, 0.2);
+            @include color-with-opacity("background-color", var(--theme-color-white-rgba, 246, 246, 246),0.2);
         
             font-weight: 500;
             text-transform: uppercase;
