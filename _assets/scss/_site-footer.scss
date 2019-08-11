@@ -65,7 +65,7 @@ $footer-follow-us-icons: ("\f39e","\f16d","\f099","\f231","\f167");
 .site-footer .contacts {
     /* add icons to ul li:before */
     ul{
-        @include fa-icon-list-addition($footer-contact-icons);
+        @include fa-icon-list-addition($footer-contact-icons,"","li");
     }
 
     h4,h6{
